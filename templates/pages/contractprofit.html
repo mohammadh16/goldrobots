@@ -1,0 +1,208 @@
+{% extends 'cpbase.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %} | Contracts {% endblock %}
+{% block content %}
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <div class="containerCp">
+       <!-- Navbar -->
+       {% include 'partials/_cpnavbar.html' %}
+
+
+        <div class="contract">
+            <div class="leftSide">
+                <div class="information">
+                    <div class="w3-center">
+                          <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ </button>
+                          <h4>Contract Information</h4>
+                          <button class="w3-button w3-light-grey" onclick="plusDivs(1)"> ❯</button>
+                       
+                      </div>
+
+                    <div class="w3-content" style="max-width:800px">
+                        {% for contract in contract %}
+                        <div class="mySlides">
+                            <div class="infoData">
+                                <div class="rowData">
+                                    <h5>Contract name</h5>
+                                    <h5>{{contract.name}}</h5>
+                                </div>
+                                <div class="rowData">
+                                    <h5>Minimum amount</h5>
+                                    <h5>$ {{contract.minimum_deposit|intcomma}}</h5>
+                                </div>
+                                <div class="rowData">
+                                    <h5>Admin clients</h5>
+                                    <h5>{{contract.admin_clients}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                      
+                      
+                </div>
+                <div class="duration">
+                    <h3 class="headBox">Duration</h3>
+                     <img src="{% static 'images/4455.png' %} " alt="">
+                </div>
+            </div>
+            <div class="leftRight">
+                <div class="profit">
+                    <h3 class="headBox">Profit sharing</h3>
+                    <div class="chartProfit">
+                        <div class="pie">
+                            <canvas id="myChart" ></canvas>
+
+                        </div>
+                        <div class="lines"></div>
+                        <div class="legends">
+                            <div class="topL">
+                                <div class="ball"></div>
+                                <h6>Bulima Share</h6>
+                            </div>
+                            <div class="downL">
+                                <div class="ball"></div>
+                                <h6>Your Share</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Minmumm">
+                    <h3 class="headBox">Minimum profit</h3>
+                    <div class="mainRuler">
+                        <div class="trendRuler"></div>
+                        <div class="rulerPlace">
+                            <div class='ruler'>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                <div class='mm'></div>
+                                </div>
+                                <div class='cm'></div>
+                               </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="activePlace">
+            <h5>In order to submit a contact you must first choose it here and then sumit it in the Personal Setting page.</h5>
+            <a href="{% url 'setting' %}"><button>Active</button></a>
+        </div>
+        <div class="logoFooter">
+            <img src="{% static 'images/Group550.png' %}" alt="">
+        </div>
+    </div>
+
+    
+</body>
+<script src="{% static 'js/PieChart.js' %}"></script>
+{% endblock %}

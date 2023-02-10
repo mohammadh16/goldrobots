@@ -1,0 +1,109 @@
+.Contracts{
+    width: 100%;
+    padding: 6rem 3rem 3rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Contracts .boxPlace{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Contracts .boxPlace h2{
+    width: 40rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.Contracts .boxPlace .boxC{
+    width: 40rem;
+    height: 13rem;
+    background-color: #F5F5F5;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.Contracts .boxPlace .boxC .logoContract{
+   width: 30%;
+   height: 100%;
+   background-color: #F8EAA5;
+   padding: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   flex-direction: column;
+}
+.Contracts .boxPlace .boxC .logoContract img{
+   width: 6rem;
+   margin-bottom: 0.6rem;
+}
+.Contracts .boxPlace .boxC .details{
+   width: 70%;
+   height: 100%;
+}
+.Contracts .boxPlace .boxC .details{
+   width: 70%;
+   height: 100%;
+   padding: 1rem 2rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+.Contracts .boxPlace .boxC .details .item{
+   width: 100%;
+   height: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.footerAbout {
+    width: 100% !important;
+    padding: 2rem;
+    background-color: #1E2126;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0 !important;
+}
+.footerAbout .logo-version {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+}
+.footerAbout .logo-version h5{
+    margin-left: 1rem;
+    color: rgb(141, 141, 141);
+}
+.footerAbout .logo-version img{
+    width: 3rem;
+}
+/* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
+@media (max-width: 750px) {
+    .Contracts .boxPlace{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .Contracts .boxPlace h2{
+        width: 95%;
+       
+    }
+    .Contracts .boxPlace .boxC{
+        width: 95%;
+        height: 10rem;
+     
+    }
+    .Contracts .boxPlace .boxC .logoContract img{
+        width: 4rem;
+        margin-bottom: 0.6rem;
+     }
+}

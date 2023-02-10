@@ -1,0 +1,417 @@
+.contract{
+    width: 80%;
+    margin-top: 6rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+}
+.contract .leftSide{
+    width: 35%;
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    color: #757575;
+
+}
+.contract .leftSide .information{
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.contract .leftSide .duration{
+    width: 100%;
+    height: 53%;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contract .leftSide .duration img{
+    width: 50%;
+}
+.contract .leftRight{
+    width: 64%;
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    color: #757575;
+
+}
+.contract .leftRight .profit{
+    width: 100%;
+    height: 54%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contract .leftRight .Minmumm{
+    width: 100%;
+    height: 44%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headBox{
+    width: 100%;
+    text-align: center;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.chartProfit{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    margin-top: -2rem;
+    align-items: center;
+    justify-content: center;
+}
+.chartProfit .pie{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chartjs-render-monitor{
+    width: 200% !important;
+    height: 100% !important;
+    display: flex;
+    z-index: 5;
+    /* box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset ; */
+
+    
+}
+.chartProfit .lines{
+    width: 50%;
+    height: 2rem;
+    margin-left: -2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.192);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+    z-index: 4;
+    margin-top: 20px;
+}
+.chartProfit .legends{
+    width: 7rem;
+    height: 4rem;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.chartProfit .legends .topL{
+   width: 100%;
+   height: 1.8rem;
+   background-color: #E5922D;
+   position: absolute;
+   top: 1px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 12px 0 3px;
+   color: #fff;
+
+}
+.ball{
+    width: 25px;
+    height: 94%;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.chartProfit .legends .downL{
+   width: 100%;
+   height: 1.8rem;
+   background-color: #FCE357;
+   position: absolute;
+   bottom: 1px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 17px 0 3px;
+   color: #fff;
+}
+
+.mainRuler{
+    width: 85%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mainRuler .trendRuler{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    background-color: #E5922D;
+    align-items: center;
+    justify-content: center;
+   border-radius: 20px;
+   margin-bottom: 1rem;
+}
+.mainRuler .rulerPlace{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ruler {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    height: 14px;
+
+   }
+   .ruler .cm,
+   .ruler .mm {
+    position: absolute;
+    border-left: 1px solid #555;
+    height: 14px;
+    width: 10%;
+   }
+   .ruler .cm:after {
+    position: absolute;
+    bottom: -15px;
+    font: 11px/1 sans-serif;
+   }
+   .ruler .mm {
+    height: 5px;
+   }
+   .ruler .mm:nth-of-type(5) {
+    height: 10px;
+   }
+   .ruler .cm:nth-of-type(1) {
+    left: 0%;
+   }
+   .ruler .cm:nth-of-type(1):after {
+    content: "0";
+   }
+   .ruler .cm:nth-of-type(2) {
+    left: 10%;
+   }
+   .ruler .cm:nth-of-type(2):after {
+    content: "0.4";
+   }
+   .ruler .cm:nth-of-type(3) {
+    left: 20%;
+   }
+   .ruler .cm:nth-of-type(3):after {
+    content: "0.8";
+   }
+   .ruler .cm:nth-of-type(4) {
+    left: 30%;
+   }
+   .ruler .cm:nth-of-type(4):after {
+    content: "1.2";
+   }
+   .ruler .cm:nth-of-type(5) {
+    left: 40%;
+   }
+   .ruler .cm:nth-of-type(5):after {
+    content: "1.6";
+   }
+   .ruler .cm:nth-of-type(6) {
+    left: 50%;
+   }
+   .ruler .cm:nth-of-type(6):after {
+    content: "2.0";
+   }
+   .ruler .cm:nth-of-type(7) {
+    left: 60%;
+   }
+   .ruler .cm:nth-of-type(7):after {
+    content: "2.4";
+   }
+   .ruler .cm:nth-of-type(8) {
+    left: 70%;
+   }
+   .ruler .cm:nth-of-type(8):after {
+    content: "2.8";
+   }
+   .ruler .cm:nth-of-type(9) {
+    left: 80%;
+   }
+   .ruler .cm:nth-of-type(9):after {
+    content: "3.2";
+   }
+   .ruler .cm:nth-of-type(10) {
+    left: 90%;
+   }
+   .ruler .cm:nth-of-type(10):after {
+    content: "2.6";
+   }
+   .ruler .cm:nth-of-type(11) {
+    left: 100%;
+   }
+   .ruler .cm:nth-of-type(11):after {
+    content: "4.0";
+   }
+   .ruler .mm:nth-of-type(1) {
+    left: 10%;
+   }
+   .ruler .mm:nth-of-type(2) {
+    left: 20%;
+   }
+   .ruler .mm:nth-of-type(3) {
+    left: 30%;
+   }
+   .ruler .mm:nth-of-type(4) {
+    left: 40%;
+   }
+   .ruler .mm:nth-of-type(5) {
+    left: 50%;
+   }
+   .ruler .mm:nth-of-type(6) {
+    left: 60%;
+   }
+   .ruler .mm:nth-of-type(7) {
+    left: 70%;
+   }
+   .ruler .mm:nth-of-type(8) {
+    left: 80%;
+   }
+   .ruler .mm:nth-of-type(9) {
+    left: 90%;
+   }
+   .ruler .mm:nth-of-type(10) {
+    left: 100%;
+   }
+   #mentionme{  
+     text-align:center;
+     margin-top:10%;
+   }
+
+   .w3-content{
+    width: 100%;
+    height: 80%;
+   }
+   .mySlides{
+    width: 100%;
+    height: 100%;
+   }
+   .w3-center{
+    width: 90%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid #757575;
+   }
+   .w3-center .w3-button{
+   border: none;
+   background-color: rgba(85, 85, 85, 0);
+   font-size: 20px;
+   color: #757575;
+   cursor: pointer;
+   }
+.infoData{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    flex-direction: column;
+}
+.infoData .rowData{
+    width: 90%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.durationImg{
+    width: 48%;
+    height: 10.1rem;
+    background: url(../images/4455.png) no-repeat center center/cover;
+    position: relative;
+}
+.durationImg .Time1{
+    position: absolute;
+    top: 33px;
+    left: 10px;
+}
+
+.activePlace{
+    width: 80%;
+    height: 4rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: 8rem;
+}
+.activePlace h5{
+    color: #757575;
+    
+}
+.activePlace button{
+    padding: 10px;
+    color: #fff;
+    border: none;
+    background-color: #E5922D;
+    width: 15rem;
+    border-radius: 5px;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset ;
+  cursor: pointer;
+}
+.activePlace button:active{
+    box-shadow: none;
+}
+
+.logoFooter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 2rem 8rem;
+    position: absolute;
+    bottom: 0;
+}
+.logoFooter img{
+    width: 14rem;
+}   
+
+/* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
+@media (max-width: 750px) {
+    .contract .leftSide{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .contract .leftRight{
+        width: 100%;
+    }
+}

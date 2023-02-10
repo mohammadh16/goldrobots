@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} | Top News{% endblock %}
+{% block content %}
+<body>
+    <div class="container">
+        <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+            <div class="mainNews">
+                <h2>News and Events</h2>
+                <div class="w3-content w3-display-container" >
+                    <div class="mySlides">
+                        <div class="infoSlide">
+                            <img src="{% static 'images/GTD-FY-2022_0.jpg' %}" alt="Gold">
+                            <div class="info-place">
+                                <h3>Annual gold demand soars to a new decade high in 2022</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the</p>
+                                <div class="date">
+                                    <h5>31 January, 2023</h5>
+                                    <a href="">Read more ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="infoSlide">
+                            <img src="{% static 'images/gold-bar-hand.jpg' %}" alt="Gold">
+                            <div class="info-place">
+                                <h3>Annual gold demand soars to a new decade high in 2022</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the</p>
+                                <div class="date">
+                                    <h5>31 January, 2023</h5>
+                                    <a href="">Read more ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="infoSlide">
+                            <img src="{% static 'images/GTD-FY-2022_0.jpg' %}" alt="Gold">
+                            <div class="info-place">
+                                <h3>Annual gold demand soars to a new decade high in 2022</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the</p>
+                                <div class="date">
+                                    <h5>31 January, 2023</h5>
+                                    <a href="">Read more ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" >
+                    
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-Item">
+                <div class="box">
+                    <img src="{% static 'images/GDT-KeyVisual-v1_0.jpg' %}" alt="Item">
+                    <h5>Annual gold demand soars to a new decade high in 2022 </h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veniam expedita omnis velit, a quis aspernatur doloribus vero maxime! Soluta!</p>
+                    <div class="date">
+                        <h6>31 January, 2023</h6>
+                        <a href="">Read more ></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/GDT-KeyVisual-v1_0.jpg' %}" alt="Item">
+                    <h5>Annual gold demand soars to a new decade high in 2022 </h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veniam expedita omnis velit, a quis aspernatur doloribus vero maxime! Soluta!</p>
+                    <div class="date">
+                        <h6>31 January, 2023</h6>
+                        <a href="">Read more ></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/GDT-KeyVisual-v1_0.jpg' %}" alt="Item">
+                    <h5>Annual gold demand soars to a new decade high in 2022 </h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veniam expedita omnis velit, a quis aspernatur doloribus vero maxime! Soluta!</p>
+                    <div class="date">
+                        <h6>31 January, 2023</h6>
+                        <a href="">Read more ></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/GDT-KeyVisual-v1_0.jpg' %}" alt="Item">
+                    <h5>Annual gold demand soars to a new decade high in 2022 </h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo veniam expedita omnis velit, a quis aspernatur doloribus vero maxime! Soluta!</p>
+                    <div class="date">
+                        <h6>31 January, 2023</h6>
+                        <a href="">Read more ></a>
+                    </div>
+                </div>
+                <div class="btn-place">
+                    <button>See more</button>
+                </div>
+            </div>
+            <footer class="footerAbout">
+                <div class="logo-version">
+                    <img src="{% static 'images/Layer2.png' %}" alt="Logo">
+                    <h5>© 2022 All Rights Reserved Goldrobots</h5>
+                </div>
+            </footer>
+        </div>
+
+</body>
+
+{% endblock %}

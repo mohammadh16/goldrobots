@@ -1,0 +1,112 @@
+{% extends 'cpbase.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %} | Finance Detail{% endblock %}
+{% block content %}
+<body>
+    <div class="containerCp">
+         
+        <!-- Navbar -->
+         {% include 'partials/_cpnavbar.html' %}
+
+        <div class="Main-Cp">
+            <div class="mainTab">
+                                
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'Bank')" id="defaultOpen">Bank Accounts</button>
+                    <button class="tablinks" onclick="openCity(event, 'Deposit')">Deposit</button>
+                    <button class="tablinks" onclick="openCity(event, 'Payment')">Payment History</button>
+                    <button class="tablinks" onclick="openCity(event, 'Withdraw')">Withdraw</button>
+                </div>
+                
+                <div id="Bank" class="tabcontent">
+                    <div class="inputs">
+                        <div class="item">
+                            <label for="">Bank Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="item">
+                            <label for="">Country</label>
+                            <input type="text">
+                        </div>
+                        <div class="item">
+                            <label for="">Account number</label>
+                            <input type="text">
+                        </div>
+                        <div class="item">
+                            <label for="">Currency</label>
+                            <input type="text">
+                        </div>
+                        <div class="item">
+                            <label for="">Swift code</label>
+                            <input type="text">
+                        </div>
+                        
+                        <div class="btnAdd">
+                            <button>Add Bank</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="Deposit" class="tabcontent">
+                    <div class="inputs">
+                        <div class="item">
+                            <label for="">Payment system</label>
+                            <input type="text">
+                        </div>
+                        <div class="item">
+                            <label for="">Amount</label>
+                            <input type="text">
+                        </div>
+                       
+                        
+                        <div class="btnAdd">
+                            <button>Deposit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="Payment" class="tabcontent">
+                    <div class="inputsPay">
+                        {% for payment in payment_history %}
+                        {% if payment.account.accountname == user.username %}
+                      <div class="rowPay">
+                         <h3>{{payment.date}}</h3>
+                         <h3>{{payment.hour}}</h3>
+                         <h3>{{payment.type}}</h3>
+                         <h3>{{payment.status}}</h3>
+                         <h3>{{payment.via}}  </h3>
+                         <h3>${{payment.amount|intcomma}}</h3>
+                      </div>
+                      {% endif %}
+                      {% endfor %}
+                      
+                    </div>
+                </div>
+                <div id="Withdraw" class="tabcontent">
+                    <div class="inputs">
+                        <div class="item">
+                            <label for="">Payment system</label>
+                            <input type="text">
+                        </div>
+                        <div class="item">
+                            <label for="">Amount</label>
+                            <input type="text">
+                        </div>
+                        
+                        
+                        <div class="btnAdd">
+                            <button>Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+                
+               
+
+
+            </div>
+        </div>
+        <div class="logoFooter">
+            <img src="{% static 'images/Group550.png' %}" alt="">
+        </div>
+    </div>
+</body>
+{% endblock %}

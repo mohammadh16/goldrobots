@@ -1,0 +1,256 @@
+.support{
+    position: fixed;
+    right: 8rem;
+    bottom: 2rem;
+    width: 3rem;
+    z-index: 100;
+}
+#activeColor{
+    color: gold;
+}
+header {
+    width: 100%;
+    background-color: #202026;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+}
+header .left {
+    width:15rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header .left a{
+    color: #fff;
+    text-decoration: none;
+}
+header .right {
+    width: 60%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .right .lists{
+    width: 70%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+header .right .lists a{
+    
+    text-decoration: none;
+    color: #fff;
+}
+header .right .lists a:hover{
+    color: gold;
+}
+header .right .language {
+    width: 20%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header .right .language img:nth-child(1){
+    width: 40px;
+    cursor: pointer;
+}
+header .right .language img:nth-child(2){
+    width: 40px;
+    cursor: pointer;
+}
+.MainNav{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+    background: url(../images/close-up-photo-gold-bar-black-background-copy-space.png) no-repeat center center/cover;
+}
+.MainNav .NameCompany{
+    width: 30rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 20%;
+}
+.MainNav .NameCompany img{
+    width: 14rem;
+}
+.MainNav .NameCompany h3{
+   text-align: center;
+   color: #fff;
+   margin-top: 2rem;
+   line-height: 35px;
+   direction: ltr;
+}
+
+.invest{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+.invest .box-place{
+   width: 70%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+   margin-top: 1.5rem;
+}
+.invest .box-place .box{
+   width: 18rem;
+   height: 14rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3),
+   0 0 40px rgba(0, 0, 0, 0.1) inset;
+   margin: 10px 0;
+}
+.invest .box-place .box img{
+   position: absolute;
+   width: 100%;
+   height: 70%;
+}
+.invest .box-place .box h5{
+   position: absolute;
+   bottom: 40px;
+   width: 90%;
+   
+}
+.invest .box-place .box p{
+   position: absolute;
+   bottom: 20px;
+   width: 90%;
+   font-size: 10px;
+   color: rgba(110, 109, 109, 0.842);
+   
+}
+.about{
+    width: 100%;
+    background: url(../images/MaskGroup247.jpg) no-repeat center center/cover;
+    position: relative;
+    display: flex;
+}
+.about .shadow{
+    width: 100%;
+    height: 100%;
+    background-color: #20202676;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 20rem;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    font-size: "Segoeuil";
+    
+}
+.videos{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.videos .Mainplace{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.videos .Mainplace .scren{
+    width: 20rem;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px 15px;
+}
+.videos .Mainplace .scren .videoStyle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+footer {
+    width: 85%;
+    padding: 2rem;
+    background-color: #1E2126;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+footer .logo-version {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+}
+footer .logo-version h5{
+    margin-left: 1rem;
+    color: rgb(141, 141, 141);
+}
+footer .logo-version img{
+    width: 3rem;
+}
+
+/* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
+@media (max-width: 750px) {
+    header .right {
+        width: 100%;
+        font-size: 12px;
+        order: 1;
+    }
+    header .left {
+        width:100%;
+        order: 2;
+    }
+    .MainNav .NameCompany{
+        margin-left: 20%;
+    }
+    .MainNav .NameCompany img{
+        width: 11rem;
+        margin-top: 1rem;
+    }
+    .MainNav .NameCompany h3{
+        width: 100%;
+        font-size: 13px;
+     }
+     .about .shadow{
+    
+        padding: 10rem 2rem;
+      
+        
+    }
+    .videos .Mainplace{
+        width: 100%;
+        
+    }
+    footer .logo-version {
+        margin-left: 1rem;
+    }
+    
+}

@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} | Welcome{% endblock %}
+
+
+{% block content %}
+<body>
+    <div class="container">
+        <div id="popup1" class="overlay">
+            <form action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <h4>Sign In</h4>
+                <div class="boxInput">
+                    <div class="logoLogin"><img src="{% static 'images/user.png' %}" alt=""></div>
+                    <input type="username" name="username" placeholder="Username">
+                </div>
+                <div class="boxInput">
+                    <div class="logoLogin"><img src="{% static 'images/icons8-lock-50.png' %}" alt=""></div>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="remember">
+                    <input type="checkbox">
+                    <h5>Remember me</h5>
+                </div>
+                    <div class="btnLog">
+                    <button>Login</button>
+                    </div>
+                <a class="forgotP" href="{% url 'reset_password' %}">Forgot your password?</a>
+                <div class="signin"><p>New here?</p><a href="#">Sign up</a></div>
+           </div></form>
+        </div>
+        <div id="popup2" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <h4>Sign Up</h4>
+                <input class="signUpInput" type="text" placeholder="Title*">
+                <input class="signUpInput" type="text" placeholder="Username*">
+                <input class="signUpInput" type="text" placeholder="First Name*">
+                <input class="signUpInput" type="text" placeholder="Last Name*">
+                <input class="signUpInput" type="text" placeholder="Email*">
+                <input class="signUpInput" type="text" placeholder="Password*">
+                <input class="signUpInput" type="text" placeholder="Confirm Password*">
+                <input class="signUpInput" type="text" placeholder="Phone Number*">
+                <input class="signUpInput" type="text" placeholder="Country*">
+                <input class="signUpInput" type="text" placeholder="Preferred Contact Language*">
+                <div class="btnLog">
+                    <button>Join</button>
+                </div>
+                <div class="signin"><p>Already have an account?</p><a href="#popup1">Sign in</a></div>
+           </div>
+        </div>
+        <!-- Navbar -->
+        {% include 'partials/_navbar.html' %}
+
+        
+        
+        <div class="MainNav">
+            <div class="NameCompany">
+                <img src="{% static 'images/Layer -1.png' %}" alt="LOGO">
+                <h3>We design all in one tech solution for the complex<br/>needs of the management industry.</h3>
+            </div>
+         </div>
+         <div class="invest">
+            <h2>Reasons to invest in gold</h2>
+            <div class="box-place">
+                <div class="box">
+                    <img src="{% static 'images/gold-bars-1.png' %}" alt="Gold">
+                    <h5>1.It's easy to buy store and sell</h5>
+                    <p>Gold can come in a physical form or it can be...</p>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/MaskGroup245.jpg' %}" alt="Gold">
+                    <h5>2.It can help with inflation</h5>
+                    <p>while gold's ability to battle inflation is incons...</p>
+                </div>
+                <div class="box">
+                    <img src="{% static 'images/MaskGroup246.jpg' %}" alt="Gold">
+                    <h5>3.It can diversify your portfolio</h5>
+                    <p>Gold can help diversify your portfolio. So in the...</p>
+                </div>
+            </div>
+         </div>
+         <div class="about">
+            <div class="shadow">
+                Although the U.S. dollar is one of the world's most important reserve currencies, when the value of the dollar falls against other currencies as it did between 1998 and 2008, this often prompts people to flock to the security of gold, which raises gold prices.The price of gold nearly tripled between 1998 and 2008,reaching the $1,000 an ounce milestone in early 2008 and nearly doubling between 2008 and 2012 , hitting above the $2,000 mark. 1 The decline is the U.S. dollar occurred for a number of reasons , including the country's large budget and trade deficits and a large increase in the mony supply.
+            </div>
+         </div>
+         <div class="videos">
+            <h2>Why you should invest in gold</h2>
+            <div class="Mainplace">
+                <div class="scren">
+                    <img class="videoStyle" src="{% static 'images/gdt-q3-2022_1 Large.jpg' %}" alt="">
+                </div>
+                <div class="scren">
+                    <img class="videoStyle" src="{% static 'images/gdt-q3-2022_1 Large.jpg' %}" alt="">
+                </div>
+                <div class="scren">
+                    <img class="videoStyle" src="{% static 'images/gdt-q3-2022_1 Large.jpg' %}" alt="">
+                </div>
+                <div class="scren">
+                    <img class="videoStyle" src="{% static 'images/gdt-q3-2022_1 Large.jpg' %}" alt="">
+                </div>
+            </div>
+         </div>
+
+         <footer class="footermainpage">
+            <div class="logo-version">
+                <img src="{% static 'images/Layer2.png' %}" alt="Logo">
+                <h5>© 2022 All Rights Reserved Goldrobots</h5>
+            </div>
+         </footer>
+        
+    </div>
+
+   
+    
+</body>
+</html>
+
+
+{% endblock  %}
+
+

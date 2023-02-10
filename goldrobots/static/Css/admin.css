@@ -1,0 +1,42 @@
+#header{
+    height: 80px;
+    background: black;
+    color: gold;
+}
+#branding h1{
+    color: gold;
+}
+
+div.breadcrumbs{
+    background: black;
+}
+
+div.breadcrumbs a {
+    color: gold;
+}
+
+.module h2, .module caption, .inline-group h2{
+    background: black;
+   
+}
+
+.module caption a {
+    color: gold;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: gold;
+    color: black;
+}
+.button.default, input[type=submit].default, .submit-row input.default{
+    background: gold;
+    color: black;
+}
+
+a.section:link, a.section:visited {
+    color: gold;
+}
+
+.current-app .section:visited { 
+    color: gold;
+}

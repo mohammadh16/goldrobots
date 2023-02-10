@@ -1,0 +1,97 @@
+{% load static %}
+<img src="{% static 'images/support.png' %}" alt="support" class="support">
+<header>
+    {% if user.is_authenticated %}
+        <div class="left" >
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+        <div class="right">
+            <div class="lists">
+                {% if '/' == request.path %}
+                <a id="activeColor" href="{% url 'index' %}">Home</a>
+                {% else %}
+                <a href="{% url 'index' %}">Home</a>
+                {% endif %}
+
+                {% if 'news' in request.path %}
+                <a id="activeColor" href="{% url 'news' %}">Gold News</a>
+                {% else %}
+                <a href="{% url 'news' %}">Gold News</a>
+                {% endif %}
+
+                {% if 'contract' in request.path %}
+                <a id="activeColor" href="{% url 'contract' %}">Contracts</a>
+                {% else %}
+                <a href="{% url 'contract' %}">Contracts</a>
+                {% endif %}
+                
+                
+                {% if 'investment' in request.path %}
+                <a id="activeColor" href="{% url 'investment' %}">Investment</a>
+                {% else %}
+                <a href="{% url 'investment' %}">Investment</a>
+                {% endif %}
+                
+                {% if 'about' in request.path %}
+                <a id="activeColor" href="{% url 'about' %}">About Us</a>
+                {% else %}
+                <a href="{% url 'about' %}">About Us</a>
+                {% endif %}
+                
+
+            </div>
+            <div class="language">
+                <img src="{% static 'images/English.png' %}" alt="language">
+                <a href="{% url 'dashboard' %}"><img src="{% static 'images/MaskGroup1.png' %}" alt="MaskGroup1"></a>
+            </div>
+        </div>
+    {% else %}
+    <div class="left">
+        <a href="/#popup1">Sign In</a>
+        <a href="/#popup2">Sign Up</a>
+    </div>
+    <div class="right">
+        <div class="lists">
+            {% if '/' == request.path %}
+            <a id="activeColor" href="{% url 'index' %}">Home</a>
+            {% else %}
+            <a href="{% url 'index' %}">Home</a>
+            {% endif %}
+
+            {% if 'news' in request.path %}
+            <a id="activeColor" href="{% url 'news' %}">Gold News</a>
+            {% else %}
+            <a href="{% url 'news' %}">Gold News</a>
+            {% endif %}
+
+            {% if 'contract' in request.path %}
+            <a id="activeColor" href="{% url 'contract' %}">Contracts</a>
+            {% else %}
+            <a href="{% url 'contract' %}">Contracts</a>
+            {% endif %}
+            
+            
+            {% if 'investment' in request.path %}
+            <a id="activeColor" href="{% url 'investment' %}">Investment</a>
+            {% else %}
+            <a href="{% url 'investment' %}">Investment</a>
+            {% endif %}
+            
+            {% if 'about' in request.path %}
+            <a id="activeColor" href="{% url 'about' %}">About Us</a>
+            {% else %}
+            <a href="{% url 'about' %}">About Us</a>
+            {% endif %}
+            
+
+        </div>
+        <div class="language">
+            <img src="{% static 'images/English.png' %}" alt="language">
+        </div>
+    </div>
+    
+
+    {% endif %}
+    
+</header>

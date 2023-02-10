@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: "Seguisb";
+}
+.containerCp{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: "Seguisb";
+    background: url(../images/shiny-yellow-leaf-gold-foil.png) no-repeat center center/cover;
+
+}
+
+@font-face {
+    font-family: Seguisb;
+    src: url(../font/seguisb.ttf);
+  }
+@font-face {
+    font-family: Segoeuil;
+    src: url(../font/segoeuil.ttf);
+  }
+
+ 
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  padding: 2rem;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+.popupSignIn{
+  height: 25rem;
+}
+
+.popup h4 {
+  margin-top: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.popup h6 {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+.popup .boxInput {
+  width: 80%;
+  height: 2.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.312);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.popup .boxInput .logoLogin{
+  width: 13%;
+  height: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.popup .boxInput .logoLogin img{
+  position: absolute;
+  width: 60%;
+}
+.popup .boxInput input{
+  width: 87%;
+  height: 100%;
+  border: none;
+  background-color: #06d85e00;
+  padding-left: 10px;
+  font-size: 15px;
+}
+.popup .boxInput input:focus{
+  outline: none;
+}
+.popup .boxInput input::placeholder{
+  color: #33333355;
+}
+.popup .remember{
+  width: 80%;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.popup .remember h5{
+  color: #333333a6;
+  font-size: 11px;
+  margin-left: 10px;
+}
+.popup .btnLog {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  
+}
+.popup .btnLog button{
+  padding: 10px;
+  width: 9rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #F2D884;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.popup .forgotP{
+  text-decoration: none;
+  color: #33333375;
+  font-size: 10px;
+  width: 9rem;
+  margin-top: 5px;
+}
+.popup .forgotP:hover{
+  color: gold;
+}
+.popup .signin{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 5px;
+  width: 9rem;
+}
+.popup .signinLeft{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.popup .signinLeft p{
+    color: #33333375;
+    font-size: 9px;
+}
+.popup .signin p{
+    color: #33333375;
+    font-size: 9px;
+}
+.popup .signinLeft a{
+ text-decoration: none;
+  color: #2a2828e7;
+  font-size: 10px;
+  margin-left: 5px;
+}
+.popup .signin a{
+ text-decoration: none;
+  color: #2a2828e7;
+  font-size: 10px;
+  margin-left: 5px;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .signUpInput {
+  width: 90%;
+    height: 2.5rem;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.321);
+    font-size: 20px;
+    padding-left: 1rem;
+    margin: 5px 0;
+}
+.popup .signUpInput::placeholder {
+  color: #3333335f;
+  font-size: 15px;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}

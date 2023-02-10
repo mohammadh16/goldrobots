@@ -1,0 +1,29 @@
+{% load static %}
+
+<div id="mySidenav" class="sidenav">
+    <a href="{% url 'index' %}" class="header"><img src="{% static 'images/Group550.png' %}" alt=""></a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{% url 'profile' %}">Profile</a>
+    <a href="{% url 'dashboard' %}">Dashboard</a>
+    <a href="{% url 'bank' %}">Bank</a>
+    <a href="{% url 'contractprofit' %}">Contracts</a>
+    <a href="{% url 'setting' %}">Contract Setting</a>
+    
+    {% if user.is_authenticated %}
+      <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+      <form action="{% url 'logout' %}" method="POST" id="logout">
+        {% csrf_token %}
+        <input type="hidden">
+      </form>
+      {% endif %}
+      
+</div>
+  <div class="cpHeader">
+    <div class="slider">
+     <span onclick="openNav()"><img src="{% static 'images/icons8-hamburger-menu-48.png' %}" alt="hamburger"> </span>
+    </div>
+    <div class="proImg">
+      <img src="{% static 'images/English.png' %}" alt="">
+      <a href="{% url 'dashboard' %}"><img src="{% static 'images/MaskGroup1.png' %}" alt="MaskGroup1"></a>
+    </div>
+ </div>

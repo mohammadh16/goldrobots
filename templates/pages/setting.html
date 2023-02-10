@@ -1,0 +1,82 @@
+{% extends 'cpbase.html' %}
+{% load static %}
+
+{% block title %} | Contract Extra Setting{% endblock %}
+
+{% block content %}
+<div class="containerCp">
+     
+    <!-- Navbar -->
+     {% include 'partials/_cpnavbar.html' %}
+
+
+    <div class="settingForm">
+        <h2>Contract Setting</h2>
+        <div class="inputsInfo" >
+           
+            <div class="items">
+                <label for="">Choose Contract</label>
+                <select name="" id="">
+                    <option value="">A</option>
+                    <option value="">B</option>
+                    <option value="">C</option>
+                    <option value="">D</option>
+                </select>
+            </div>
+            <div class="items">
+                <label for="">Max usage deposit</label>
+                <select name="" id="">
+                    <option value="">35%</option>
+                    <option value="">50%</option>
+                    <option value="">85%</option>
+                    <option value="">100%</option>
+                </select>
+            </div>
+            <div class="items">
+                <label for="">Leverage</label>
+                <select name="" id="">
+                    <option value="">1:100</option>
+                    <option value="">1:200</option>
+                    <option value="">1:500</option>
+                    <option value="">1:1000</option>
+                </select>
+            </div>
+            <div class="items">
+                <label for="">Add extra day</label>
+                <select name="" id="">
+                    <option value="">5 days</option>
+                    <option value="">10 days</option>
+                    <option value="">25 days</option>
+                    <option value="">50 days</option>
+                </select>
+            </div>
+            <div class="items">
+                <label for="">Trading timeframe</label>
+                <select name="" id="">
+                    <option value="">1 min</option>
+                    <option value="">5 mins</option>
+                    <option value="">15 mins</option>
+                    <option value="">1 hour</option>
+                    <option value="">1 day</option>
+                    <option value="">all timeframe</option>
+                </select>
+            </div>
+            <div class="items">
+                <label for="">Time range</label>
+                <select name="" id="">
+                    <option value="">London </option>
+                    <option value="">Tokyo</option>
+                    <option value="">New York</option>
+                </select>
+            </div>
+            <div class="btnStyle">
+                <a href="{% url 'dashboard' %}"><button>Submit</button></a>
+            </div>
+    </div>
+    <div class="logoFooter">
+        <img src="{% static 'images/Group550.png' %}" alt="">
+    </div>
+</div>
+
+</body>
+{% endblock %}

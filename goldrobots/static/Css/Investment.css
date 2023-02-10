@@ -1,0 +1,70 @@
+.MainInvest{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/gold-bar-hand.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.MainInvest .shadow{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.402);
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+}
+.MainInvest .shadow .info{
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.MainInvest .shadow .info h2{
+    width: 100%;
+    
+}
+.MainInvest .shadow .info p{
+    line-height: 30px;
+    
+}
+.footerAbout {
+    width: 100% !important;
+    padding: 2rem;
+    background-color: #1E2126;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0 !important;
+}
+.footerAbout .logo-version {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+}
+.footerAbout .logo-version h5{
+    margin-left: 1rem;
+    color: rgb(141, 141, 141);
+}
+.footerAbout .logo-version img{
+    width: 3rem;
+}
+
+/* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
+@media (max-width: 750px) {
+    .MainInvest .shadow .info{
+        width: 90%;
+        font-size: 13px;
+        margin-top: 4rem;
+    }
+    .MainInvest .shadow .info p{
+        line-height: 20px;
+        
+    }
+}

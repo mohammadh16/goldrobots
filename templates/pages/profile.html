@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %} | Personal Profile{% endblock %}
+{% block content %}
+<body>
+            <div class="containerCp">
+                <!-- Navbar -->
+                {% include 'partials/_cpnavbar.html' %}
+                    <div class="Main-Cp">
+                        {% for account in accounts %}
+                                {% if account.accountname == user.username %}
+                                        <div class="items">
+                                            <div class="card">
+                                                <img class="flag" src="{% static 'images/Polygon1.png' %}" alt="">
+                                                <img class="userPhoto" src="{{ account.photo.url }}" alt="User">
+                                                <div class="personal">
+                                                    <h2>{{user.username}}</h2>
+                                                    <h2>Account ID</h2>
+                                                    <h2>{{account.accountid}}</h2>
+                                                </div>
+                    
+                                            </div>
+                                            
+                                            <div class="itemDetails">
+                                                <div class="box-Place">
+                                                    <div class="box">
+                                                        <div class="info-Img">
+                                                            <img src="{% static 'images/ca-1.png' %}" alt="ca">
+                                                            <h2>Date of birth</h2>
+                                                        </div>
+                                                        <h3>{{account.birthdate}}</h3>
+                                                    </div>
+                                                    <div class="box">
+                                                        <div class="info-Img">
+                                                            <img src="{% static 'images/email.png' %}" alt="Email">
+                                                            <h2>Email</h2>
+                                                        </div>
+                                                        <h3>{{account.email}}</h3>
+                                                    </div>
+                                                    <div class="box">
+                                                        <div class="info-Img">
+                                                            <img class="phone" src="{% static 'images/cell-phone.png' %}" alt="ca">
+                                                            <h2>Phone</h2>
+                                                        </div>
+                                                        <h3>{{account.phone}}</h3>
+                                                    </div>
+                                                    <div class="box">
+                                                        <div class="info-Img">
+                                                            <img src="{% static 'images/ca-1.png' %}" alt="ca">
+                                                            <h2>Registration date</h2>
+                                                        </div>
+                                                        <h3>{{account.registration_date}}</h3>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="total">
+                                                    <img src="{% static 'images/credit-cards.png' %}" alt="Wallet">
+                                                    <h3>Total Balance</h3>
+                                                    <h3>$ {{account.total_balance|intcomma}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                
+                                        {% endif %}
+                                    {% endfor %}
+                    </div>
+                </div>  
+                    
+                
+</body>
+
+{% endblock %}

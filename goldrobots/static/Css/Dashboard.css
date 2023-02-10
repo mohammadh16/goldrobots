@@ -1,0 +1,393 @@
+.mainDashboard{
+    width: 90%;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 8rem;
+}
+.mainDashboard .firstLayer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mainDashboard .firstLayer .box{
+    width: 16%;
+    height: 7rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #757575;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.mainDashboard .firstLayer .box:nth-child(1){
+    width: 18%;
+}
+.mainDashboard .firstLayer .box h4{
+    margin-top: 10px;
+
+}
+.mainDashboard .firstLayer .box:nth-child(2) h4{
+    letter-spacing: 6px;
+
+}
+.mainDashboard .secondLayer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mainDashboard .secondLayer .box{
+    width: 26%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    color: #757575;
+    flex-direction: column;
+
+}
+.mainDashboard .secondLayer .box:nth-child(1){
+    width: 30%;
+}
+.mainDashboard .secondLayer .box:nth-child(2){
+    width: 17%;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+.mainDashboard .secondLayer .box .top{
+    width: 100%;
+    height: 65%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mainDashboard .secondLayer .box .top img{
+    margin: 15px 0;
+}
+.mainDashboard .secondLayer .box .top h1:nth-child(3){
+    color: #BA6D18  ;
+}
+
+.mainDashboard .secondLayer .box .down{
+    width: 100%;
+    height: 33%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.progress{
+    width: 90%;
+    height: 1.5rem;
+    background-color: #F2D884;
+    margin: 8px 0;
+    border-radius: 20px;
+    position: relative;
+}
+.colorPercent{
+    width: 45%;
+    height: 100%;
+    background-color: #BA6D18;
+    border-radius: 20px;
+
+}
+.headBox{
+    width: 100%;
+    text-align: center;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.trendLevel{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.trendLevel .percentage{
+    width: 30px;
+    height: 100%;
+    margin: 5px;
+    position: relative;
+}
+.trendLevel .percentage h5:nth-child(1){
+    bottom: 35%;
+    position: absolute;
+}
+.trendLevel .percentageBase{
+    width: 30px;
+    height: 100%;
+    margin: 5px;
+    position: relative;
+}
+.trendLevel .percentageBase h5:nth-child(1){
+    position: absolute;
+    bottom: 0;
+}
+.trendLevel .percentageBase h5:nth-child(2){
+    position: absolute;
+    top: 0;
+}
+.trendLevel .mainculom{
+    width: 70%;
+    height: 100%;
+    background-color: #F2D884;
+    position: relative;
+    
+}
+.trendLevel .mainculom .level{
+   width: 100%;
+   height: 35%;
+   position: absolute;
+   bottom: 0;
+   background-color: #BA6D18;
+}
+
+.mainChart{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.thirdLayer{
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.thirdLayer .box{
+    width: 20%;
+    height: 98%;
+    background-color: #fff;
+    display: flex;
+    color: #757575;
+    align-items: center;
+    flex-direction: column;
+}
+.thirdLayer .box:nth-child(1){
+    width: 30%;
+    padding: 0 15px;
+}
+.thirdLayer .box:nth-child(2){
+    width: 43.4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    background-color: #75757500;
+}
+.thirdLayer .box:nth-child(3){
+    width: 26%;
+}
+.thirdLayer .condition{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.thirdLayer .condition .item{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #757575;
+}
+.thirdLayer .condition .item h4:nth-child(1){
+    width: 6rem;
+}
+.thirdLayer .box .mainTrader{
+    width: 95%;
+    height: 90%;
+    overflow:scroll;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+.thirdLayer .box .mainTrader .trade{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 4px 0;
+    position: relative;
+}
+.thirdLayer .box .mainTrader .trade h5{
+    margin-right: 15px;
+    position: absolute;
+    left: 0;
+}
+.thirdLayer .box .mainTrader .trade .progressT{
+    width: 85%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    margin-left: 3rem;
+}
+.thirdLayer .box .mainTrader .trade .progressT .row{
+    height: 100%;
+    background-color: #F2D884;
+    font-size: 12px;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.thirdLayer .box .Topmap{
+    width: 100%;
+    height: 60%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
+.thirdLayer .box .Topmap .mapShow{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1rem;
+}
+.thirdLayer .box .Management{
+    width: 100%;
+    height: 39%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+
+svg {
+    width: 110%;
+    height: 90%;
+  }
+  path {
+    fill: #354E56;
+    cursor: pointer;
+  }
+  path:hover {
+    fill: #BA6D18;
+  }
+
+  .thirdLayer .box .Contacs{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thirdLayer .box .Contacs .person{
+    width: 9rem;
+    height: 100%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #757575;
+    
+
+  }
+  .thirdLayer .box .Contacs .person img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+  .thirdLayer .box .Contacs .person h4{
+    margin: 10px 0;
+    text-align: center;
+    overflow: hidden;
+    font-size: 12px ;
+  }
+  .thirdLayer .box .Contacs .person .socialMedia{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thirdLayer .box .Contacs .person .socialMedia .media{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+  .thirdLayer .box .Contacs .person .socialMedia .media:nth-child(2){
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 5px;
+  }
+  .thirdLayer .box .Contacs .person .socialMedia .media:nth-child(3){
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .secondLayer .box .calendar{
+    width: 70%;
+    height: 70%;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .secondLayer .box .calendar .imgCalendar{
+    width: 12rem;
+    height: 12rem;
+    background: url(../images/1120.png) no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .secondLayer .box .calendar .imgCalendar .daysC{
+    position: absolute;
+    color: #fff;
+    top: 30px;
+  }
+  .secondLayer .box .calendar .imgCalendar .dayNum{
+    position: absolute;
+    top: 90px;
+    font-size: 28px;
+  }
+
+  .logoFooter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 2rem 8rem;
+    position: absolute;
+    bottom: 0;
+}
+.logoFooter img{
+    width: 14rem;
+}

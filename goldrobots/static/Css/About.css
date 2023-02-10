@@ -1,0 +1,74 @@
+.mainAbout{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../images/23.jpg) no-repeat center center/cover;
+    position: relative;
+    
+}
+.mainAbout .Shadow{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.331);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mainAbout .Shadow .textAbout{
+   width: 35%;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   color: #fff;
+}
+.mainAbout .Shadow .textAbout h3{
+   font-weight: 800;
+   width: 100%;
+   margin-bottom: 1rem;
+}
+.mainAbout .Shadow .textAbout p{
+   line-height: 30px;
+}
+.mainAbout .Shadow .tower{
+   width: 20rem;
+   height: 32rem;
+   margin-top: 5rem;
+   margin-left: 2rem;
+}
+.footerAbout {
+    width: 100% !important;
+    padding: 2rem;
+    background-color: #1E2126;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0 !important;
+}
+.footerAbout .logo-version {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rem;
+}
+.footerAbout .logo-version h5{
+    margin-left: 1rem;
+    color: rgb(141, 141, 141);
+}
+.footerAbout .logo-version img{
+    width: 3rem;
+}
+
+/* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
+@media (max-width: 750px) {
+    .mainAbout .Shadow .tower{
+       display: none;
+     }
+     .mainAbout .Shadow .textAbout{
+        width: 100%;
+        font-size: 13px;
+        margin-top: 3rem;
+     }
+}
