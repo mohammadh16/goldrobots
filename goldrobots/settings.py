@@ -154,3 +154,9 @@ EMAIL_HOST_PASSWORD = 'qiwpvhxobmzzuykk'
 EMAIL_USE_SSL = False
 
 PASSWORD_RESET_TIMEOUT =14400
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
