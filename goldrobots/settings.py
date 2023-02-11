@@ -143,19 +143,6 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#SMTP Configuration
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'ashourishakib@gmail.com'
-EMAIL_HOST_PASSWORD = 'qiwpvhxobmzzuykk'
-EMAIL_USE_SSL = False
-
-PASSWORD_RESET_TIMEOUT =14400
-
-
 try:
     from .local_settings import *
 except ImportError:
