@@ -142,10 +142,6 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-from django.contrib.messages import constants as messages
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger'
-}
 
 #SMTP Configuration
 
@@ -156,3 +152,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ashourishakib@gmail.com'
 EMAIL_HOST_PASSWORD = 'qiwpvhxobmzzuykk'
 EMAIL_USE_SSL = False
+
+PASSWORD_RESET_TIMEOUT =14400

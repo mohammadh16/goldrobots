@@ -50,9 +50,14 @@
                                             <h5>%100</h5>
                                         </div>
                                         <div class="mainculom">
-                                            <div class="level"></div>
+                                            <div class="level" id="t11"></div>
+                                            <script>
+                                                var source = document.getElementById("t1");    
+                                                var level = document.getElementById("t11")
+                                                    level.style.width = source.innerHTML;
+                                        </script>
                                         </div>
-                                        <div class="percentage">
+                                        <div class="percentage" id="t1">
                                             <h5>%{{account.equity_percentage}} </h5>
                                         </div>
                                     </div>

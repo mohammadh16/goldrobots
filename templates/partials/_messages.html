@@ -1,0 +1,5 @@
+{% if messages %}
+    {% for message in messages %}
+        <script> swal('{{message}}',icon="")</script>
+        {% endfor %}
+{% endif %}

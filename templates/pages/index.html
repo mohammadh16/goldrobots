@@ -16,11 +16,11 @@
                 <h4>Sign In</h4>
                 <div class="boxInput">
                     <div class="logoLogin"><img src="{% static 'images/user.png' %}" alt=""></div>
-                    <input type="username" name="username" placeholder="Username">
+                    <input type="username" name="username" placeholder="Username" required>
                 </div>
                 <div class="boxInput">
                     <div class="logoLogin"><img src="{% static 'images/icons8-lock-50.png' %}" alt=""></div>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password"  placeholder="Password" required>
                 </div>
                 <div class="remember">
                     <input type="checkbox">
@@ -30,36 +30,43 @@
                     <button>Login</button>
                     </div>
                 <a class="forgotP" href="{% url 'reset_password' %}">Forgot your password?</a>
-                <div class="signin"><p>New here?</p><a href="#">Sign up</a></div>
+                <div class="signin"><p>New here?</p><a href="#popup2">Sign up</a></div>
            </div></form>
         </div>
         <div id="popup2" class="overlay">
             <div class="popup">
+                <form action="{% url 'register' %}" method="POST">
+                    {% csrf_token %}
                 <a class="close" href="#">&times;</a>
                 <h4>Sign Up</h4>
-                <input class="signUpInput" type="text" placeholder="Title*">
-                <input class="signUpInput" type="text" placeholder="Username*">
-                <input class="signUpInput" type="text" placeholder="First Name*">
-                <input class="signUpInput" type="text" placeholder="Last Name*">
-                <input class="signUpInput" type="text" placeholder="Email*">
-                <input class="signUpInput" type="text" placeholder="Password*">
-                <input class="signUpInput" type="text" placeholder="Confirm Password*">
-                <input class="signUpInput" type="text" placeholder="Phone Number*">
-                <input class="signUpInput" type="text" placeholder="Country*">
-                <input class="signUpInput" type="text" placeholder="Preferred Contact Language*">
+                <input class="signUpInput" type="text" placeholder="Title*" name="title_signup" required>
+                <input class="signUpInput" type="text" placeholder="Username*" name="username_signup" required>
+                <input class="signUpInput" type="text" placeholder="First Name*" name="firstname_signup" required>
+                <input class="signUpInput" type="text" placeholder="Last Name*" name="lastname_signup" required>
+                <input class="signUpInput" type="email" placeholder="Email*" name="email_signup" required>
+                <input class="signUpInput" type="password" placeholder="Password*" name="password_signup" required>
+                <input class="signUpInput" type="password" placeholder="Confirm Password*" name="password2_signup" required>
+                <input class="signUpInput" type="number" placeholder="Phone Number*" name="phone_signup" required>
+                <input class="signUpInput" type="text" placeholder="Country*"name="country_signup" required>
+                <input class="signUpInput" type="text" placeholder="Preferred Contact Language*" name="language_signup" required>
                 <div class="btnLog">
                     <button>Join</button>
                 </div>
                 <div class="signin"><p>Already have an account?</p><a href="#popup1">Sign in</a></div>
+                
+            </form>
            </div>
+        
         </div>
         <!-- Navbar -->
         {% include 'partials/_navbar.html' %}
-
-        
+       
+        {% include 'partials/_messages.html' %}
         
         <div class="MainNav">
+            
             <div class="NameCompany">
+                
                 <img src="{% static 'images/Layer -1.png' %}" alt="LOGO">
                 <h3>We design all in one tech solution for the complex<br/>needs of the management industry.</h3>
             </div>

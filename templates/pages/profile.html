@@ -17,7 +17,12 @@
                                                 <div class="personal">
                                                     <h2>{{user.username}}</h2>
                                                     <h2>Account ID</h2>
+                                                    {% if account.accountid%}
                                                     <h2>{{account.accountid}}</h2>
+                                                        {% else %}
+                                                        <h2></h2>
+                                                        {% endif %}
+                                                    
                                                 </div>
                     
                                             </div>
@@ -29,21 +34,29 @@
                                                             <img src="{% static 'images/ca-1.png' %}" alt="ca">
                                                             <h2>Date of birth</h2>
                                                         </div>
+                                                        {% if account.birthdate%}
                                                         <h3>{{account.birthdate}}</h3>
+                                                        {% else %}
+                                                        <h3></h3>
+                                                        {% endif %}
                                                     </div>
                                                     <div class="box">
                                                         <div class="info-Img">
                                                             <img src="{% static 'images/email.png' %}" alt="Email">
                                                             <h2>Email</h2>
                                                         </div>
-                                                        <h3>{{account.email}}</h3>
+                                                        <h3>{{user.email}}</h3>
                                                     </div>
                                                     <div class="box">
                                                         <div class="info-Img">
                                                             <img class="phone" src="{% static 'images/cell-phone.png' %}" alt="ca">
                                                             <h2>Phone</h2>
                                                         </div>
+                                                        {% if account.phone %}
                                                         <h3>{{account.phone}}</h3>
+                                                        {% else %}
+                                                        <h3></h3>
+                                                        {% endif %}
                                                     </div>
                                                     <div class="box">
                                                         <div class="info-Img">
@@ -57,7 +70,11 @@
                                                 <div class="total">
                                                     <img src="{% static 'images/credit-cards.png' %}" alt="Wallet">
                                                     <h3>Total Balance</h3>
+                                                    {% if account.total_balance %}
                                                     <h3>$ {{account.total_balance|intcomma}}</h3>
+                                                    {% else %}
+                                                    <h3></h3>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>

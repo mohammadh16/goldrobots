@@ -116,6 +116,8 @@
     position: absolute;
     width: 12rem;
     top: 3rem;
+    height: 12rem;
+    border-radius: 50%;
   }
   .items .card .personal{
     width: 100%;
