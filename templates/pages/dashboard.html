@@ -362,7 +362,7 @@
                                         {% if employee %}
                                             {% for employee in employee %}
                                             <div class="person">
-                                                <img src="" alt="User">
+                                                <img src="{{ employee.photo.url }}" alt="User">
                                                 <h4>{{ employee.name }}</h4>
                                                 <div class="socialMedia">
                                                    <a href="{{employee.telegram}}" class="PlaceMedia"> <img class="media" src="{% static 'images/whatsapp.png' %}" alt="whatsapp"></a>
