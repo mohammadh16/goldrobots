@@ -10,8 +10,8 @@ new Chart("myChart", {
   data: {
     datasets: [{
       backgroundColor: barColors,
-      data: yValues
+      data: yValues,
     }]
-  },
+  }
   
 });

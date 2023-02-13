@@ -336,19 +336,31 @@ svg {
     align-items: center;
     justify-content: center;
   }
-  .thirdLayer .box .Contacs .person .socialMedia .media{
+  .thirdLayer .box .Contacs .person .socialMedia .PlaceMedia{
     width: 2rem;
     height: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thirdLayer .box .Contacs .person .socialMedia .PlaceMedia .media{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
   }
-  .thirdLayer .box .Contacs .person .socialMedia .media:nth-child(2){
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 5px;
+  .thirdLayer .box .Contacs .person .socialMedia .PlaceMedia .media1{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    cursor: pointer;
   }
-  .thirdLayer .box .Contacs .person .socialMedia .media:nth-child(3){
-    width: 1.5rem;
-    height: 1.5rem;
+  .thirdLayer .box .Contacs .person .socialMedia .PlaceMedia .media2{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    cursor: pointer;
   }
   .secondLayer .box .calendar{
     width: 70%;
@@ -390,4 +402,62 @@ svg {
 }
 .logoFooter img{
     width: 14rem;
+}
+
+/* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
+@media (max-width: 750px) {
+    .mainDashboard .firstLayer .box{
+        width: 40%;
+        
+    }
+    .mainDashboard .firstLayer .box:nth-child(1){
+        width: 40%;
+    }
+    .mainDashboard .secondLayer .box{
+        width: 100%;
+        margin: 5px 0;
+    
+    }
+    .mainDashboard .secondLayer .box:nth-child(1){
+        width: 100%;
+    }
+    .mainDashboard .secondLayer .box:nth-child(2){
+        width: 100%;
+
+    
+    }
+    .thirdLayer{
+        height: 100%;
+    }
+    .thirdLayer .box{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .thirdLayer .box:nth-child(1){
+        width: 100% ;
+     
+    }
+    .thirdLayer .box:nth-child(2){
+        width: 100% ;
+        height: 43rem;
+        order: 2;
+    } 
+    .thirdLayer .box:nth-child(3){
+        width: 100%;
+        height: 30rem;
+        order: 1;
+    }
+    .thirdLayer .box .Management{
+        height: 20rem;
+        margin: 5px;
+        order: 1;
+    }
+    .thirdLayer .box .Topmap{
+        width: 100%;
+        height: 20rem;
+        order: 2;
+        margin: 5px 0;
+    }
+   
+   
 }

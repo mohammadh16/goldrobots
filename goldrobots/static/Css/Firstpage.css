@@ -216,6 +216,39 @@ footer .logo-version h5{
 footer .logo-version img{
     width: 3rem;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px;
+    z-index: 90;
+    right: 1px;
+    border-radius: 5px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .flag{
+    width: 100%;
+    height: 2rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  .flag:hover{
+    background-color: rgba(77, 77, 128, 0.34);
+    cursor: pointer;
+  }
 
 /* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
 @media (max-width: 750px) {
@@ -227,6 +260,10 @@ footer .logo-version img{
     header .left {
         width:100%;
         order: 2;
+    }
+    header .right .lists{
+        font-size: 11px;
+        width: 80%;
     }
     .MainNav .NameCompany{
         margin-left: 20%;
@@ -252,5 +289,9 @@ footer .logo-version img{
     footer .logo-version {
         margin-left: 1rem;
     }
+    .support{
+        right:2rem;
+        width:2rem;
+        }
     
 }

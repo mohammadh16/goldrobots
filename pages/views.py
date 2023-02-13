@@ -17,24 +17,20 @@ from django.utils.encoding import force_bytes,force_str
 from django.core.mail import EmailMessage
 from accounts.tokens import account_activation_token
 def index(request):
-    if request.method == 'POST' :
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = authenticate(username=username , password=password)
-
-        if user is not None:
-            login(request,user)
-            return redirect('profile')
-        else:
-            return redirect('index')
-    else:
-            return render(request,'pages/index.html')
+    accounts = Account.objects.all()
+    context = {
+        'accounts': accounts,    
+    } 
     
+    return render(request,'pages/index.html',context)
 
 
 def about(request):
-    return render(request,'pages/about.html')
+    accounts = Account.objects.all()
+    context = {
+        'accounts': accounts,
+    } 
+    return render(request,'pages/about.html',context)
 
 
 def contract(request):
@@ -54,21 +50,35 @@ def contract(request):
 
 
 def investment(request):
-    return render(request,'pages/investment.html')
+    accounts = Account.objects.all()
+    context = {
+        'accounts': accounts,
+    } 
+    return render(request,'pages/investment.html',context)
 
 
 def news(request):
-    return render(request,'pages/news.html')
+    accounts = Account.objects.all()
+    context = {
+        'accounts': accounts,
+    } 
+    return render(request,'pages/news.html',context)
 
 def setting(request):
-    return render(request,'pages/setting.html')
+    accounts = Account.objects.all()
+    context = {
+        'accounts': accounts,
+    } 
+    return render(request,'pages/setting.html',context)
 
 
 def bank(request):
+    accounts = Account.objects.all()
     payment_history = Payment_history.objects.all()
 
     context = {
-        'payment_history': payment_history
+        'payment_history': payment_history,
+        'accounts': accounts
     }
 
 
@@ -180,7 +190,7 @@ def register(request):
                     user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name) 
                     user.is_active=False
                     user.save()
-                    account = Account.objects.create(accountname = username,title=title, country=country,language=language)
+                    account = Account.objects.create(accountname = username,title=title, country=country,language=language,phone=phone)
                     account.save()
                     activateEmail(request, user, email)
                     return redirect('index')
@@ -190,4 +200,18 @@ def register(request):
 
     else:
         return render(request,'pages/index.html') 
+def signin(request):
+    if request.method == 'POST' :
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username , password=password)
+
+        if user is not None:
+            login(request,user)
+            return redirect('profile')
+        else:
+            return redirect('index')
+    else:
+            return render(request,'pages/index.html')
     

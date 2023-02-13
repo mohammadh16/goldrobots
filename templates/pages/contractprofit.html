@@ -43,10 +43,23 @@
                       
                       
                 </div>
+                {% for account in accounts %}
+                {% if account.accountname == user.username %}
                 <div class="duration">
                     <h3 class="headBox">Duration</h3>
-                     <img src="{% static 'images/4455.png' %} " alt="">
+                    <div class="durationState">
+                        <img src="{% static 'images/4455.png' %} "  alt="">
+                        <h4>{{account.remaining_days}}</h4>
+                        {% for contract in contract %}
+                        {% if account.contractname == contract.name %}
+                        <h4>{{contract.minimum_duration}}</h4>
+                        {% endif %}
+                        {% endfor %}
+
+                    </div>
                 </div>
+                {% endif %}
+                {% endfor  %}
             </div>
             <div class="leftRight">
                 <div class="profit">
@@ -57,142 +70,64 @@
 
                         </div>
                         <div class="lines"></div>
+                        {% for account in accounts %}
+                            {% if account.accountname == user.username %}
+                                {% for contract in contract %}
+                                    {% if account.contractname == contract.name %}
                         <div class="legends">
                             <div class="topL">
-                                <div class="ball"></div>
+                                <div class="ball"><h5>{{contract.bulima_share}}%</h5></div>
                                 <h6>Bulima Share</h6>
                             </div>
                             <div class="downL">
-                                <div class="ball"></div>
+                                <div class="ball"><h5>{{contract.client_share}}%</h5></div>
                                 <h6>Your Share</h6>
                             </div>
                         </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
+                
                 <div class="Minmumm">
                     <h3 class="headBox">Minimum profit</h3>
                     <div class="mainRuler">
                         <div class="trendRuler"></div>
                         <div class="rulerPlace">
-                            <div class='ruler'>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                <div class='mm'></div>
-                                </div>
-                                <div class='cm'></div>
-                               </div>
+                            <div class="lineRuler">
+                                <div style="left: 0;" class="target"></div>
+                                <div style="left: 25%;" class="target"></div>
+                                <div style="left: 50%;" class="target"></div>
+                                <div style="left: 75%;" class="target"></div>
+                                <div style="left: 100%;" class="target"></div>
+                            </div>
+                            {% for account in accounts %}
+                                {% if account.accountname == user.username %}
+                                    {% for contract in contract %}
+                                        {% if account.contractname == contract.name %}
+
+                            <div class="rulerCount">
+                                <h4 style="left: 0;">0</h4>
+                                <h4 style="left: 25%;">{{contract.first_point_ruler}}</h4>
+                                <h4 style="left: 50%;">{{contract.second_point_ruler}}</h4>
+                                <h4 style="left: 75%;">{{contract.third_point_ruler}}</h4>
+                                <h4 style="left: 100%;">{{contract.fourth_point_ruler}}</h4>
+                            </div>
+                                         {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+
                         </div>
                     </div>
 
                 </div>
+                
             </div>
         </div>
+        
         <div class="activePlace">
             <h5>In order to submit a contact you must first choose it here and then sumit it in the Personal Setting page.</h5>
             <a href="{% url 'setting' %}"><button>Active</button></a>

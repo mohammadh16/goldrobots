@@ -8,8 +8,9 @@
 {% block content %}
 <body>
     <div class="container">
+        
         <div id="popup1" class="overlay">
-            <form action="{% url 'index' %}" method="POST">
+            <form action="{% url 'signin' %}" method="POST">
                 {% csrf_token %}
             <div class="popup">
                 <a class="close" href="#">&times;</a>

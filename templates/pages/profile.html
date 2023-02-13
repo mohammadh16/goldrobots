@@ -12,8 +12,8 @@
                                 {% if account.accountname == user.username %}
                                         <div class="items">
                                             <div class="card">
-                                                <img class="flag" src="{% static 'images/Polygon1.png' %}" alt="">
-                                                <img class="userPhoto" src="{{ account.photo.url }}" alt="User">
+                                                <img class="flag_profile" src="{% static 'images/Polygon1.png' %}" alt="">
+                                                <img class="userPhoto" src="{{account.photo.url}}" alt="User">
                                                 <div class="personal">
                                                     <h2>{{user.username}}</h2>
                                                     <h2>Account ID</h2>
@@ -22,10 +22,10 @@
                                                         {% else %}
                                                         <h2></h2>
                                                         {% endif %}
-                                                    
                                                 </div>
-                    
+                            
                                             </div>
+                            
                                             
                                             <div class="itemDetails">
                                                 <div class="box-Place">

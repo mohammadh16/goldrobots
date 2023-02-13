@@ -1,4 +1,5 @@
 from django.db import models
+from accounts.models import Account 
 
 class Contract(models.Model):
     name = models.CharField(max_length=10 , choices= [('A' , 'A'),('B' , 'B'),('C' , 'C'),('D' , 'D')], blank=True)
@@ -12,7 +13,18 @@ class Contract(models.Model):
     max_usage_percentage = models.CharField( max_length=200,choices= [('35%' , '35%'),('50%' , '50%'),('85%' , '85%'),('100%' , '100%')], blank=True)
     add_extra_days = models.CharField( max_length=200,choices= [('5 days' , '5 days'),('10 days' , '10 days'),('25 days' , '25 days'),('50 days' , '50 days')], blank=True)
     time_range = models.CharField( max_length=200,choices= [('London ' , 'London '),('Tokyo' , 'Tokyo'),('New York' , 'New York')], blank=True)
+    first_point_ruler = models.IntegerField(default= 5,blank=True)
+    second_point_ruler = models.IntegerField(default= 10,blank=True)
+    third_point_ruler = models.IntegerField(default= 15,blank=True)
+    fourth_point_ruler = models.IntegerField(default= 20,blank=True)
+    bulima_share = models.CharField(max_length=50, default= "40",blank=True)
+    client_share = models.CharField(max_length=50, default= "60",blank=True)
     
+
+
     def __str__(self):
         return self.name
+
+    
+
 
