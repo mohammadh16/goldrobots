@@ -53,12 +53,12 @@
                                             <div class="level" id="t11"></div>
                                             <script>
                                                 var source = document.getElementById("t1");    
-                                                var level = document.getElementById("t11")
+                                                var level = document.getElementById("t11");
                                                     level.style.height = source.innerHTML;
                                         </script>
                                         </div>
                                         <div class="percentage" id="t1">
-                                            <h5>%{{account.equity_percentage}} </h5>
+                                            <h5>%{{account.equity_percentage}}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -362,12 +362,12 @@
                                         {% if employee %}
                                             {% for employee in employee %}
                                             <div class="person">
-                                                <img src="{{ employee.photo.url }}" alt="User">
+                                                <img src="" alt="User">
                                                 <h4>{{ employee.name }}</h4>
                                                 <div class="socialMedia">
-                                                   <a href="https://telegram.me/samaei94" class="PlaceMedia"> <img class="media" src="{% static 'images/whatsapp.png' %}" alt="whatsapp"></a>
-                                                   <a href="mailto:alireza.samaei73@gmail.com" class="PlaceMedia"><img class="media1" src="{% static 'images/1.png' %}" alt="Email"></a> 
-                                                   <a href="" class="PlaceMedia"> <img class="media2" src="{% static 'images/telegram.png' %}" alt="telegram"></a>
+                                                   <a href="{{employee.telegram}}" class="PlaceMedia"> <img class="media" src="{% static 'images/whatsapp.png' %}" alt="whatsapp"></a>
+                                                   <a href="{{employee.setemail}}" class="PlaceMedia"><img class="media1" src="{% static 'images/1.png' %}" alt="Email"></a> 
+                                                   <a href="{{employee.telegram}}" class="PlaceMedia"> <img class="media2" src="{% static 'images/telegram.png' %}" alt="telegram"></a>
                                                 </div>
                                             </div>
                                             {% endfor %}

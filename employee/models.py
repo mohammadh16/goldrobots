@@ -9,8 +9,12 @@ class Employee(models.Model):
     telegram = models.CharField(max_length=50)
     whatsapp = models.CharField(max_length=50)
     phone = models.CharField(max_length=20)
-    photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
 
 
     def __str__(self):
         return self.name
+
+    def setemail(self):
+        self.email="mailto:"+ str(self.email)
+        return self.email
