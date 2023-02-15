@@ -10,7 +10,7 @@ class Account(models.Model):
     birthdate = models.DateField(default=datetime.now,blank=True, null= True)
     phone = models.CharField(max_length=20,blank=True, null= True)
     registration_date= models.DateField(default=datetime.now,blank=True, null= True)
-    photo = models.ImageField(upload_to='photos/%Y/%m/%d/',default="static\images\MaskGroup1.png",blank = True, null= True)
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d/',default='MaskGroup1.png',blank = True, null= True)
     total_balance = models.IntegerField(blank=True, null= True)
     total_profit = models.IntegerField(blank=True, null= True)
     total_trades = models.IntegerField(blank=True, null= True)
