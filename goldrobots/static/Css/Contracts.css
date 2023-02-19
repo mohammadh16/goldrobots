@@ -12,6 +12,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 8rem;
+
 }
 .Contracts .boxPlace h2{
     width: 40rem;
@@ -86,6 +88,10 @@
 }
 .footerAbout .logo-version img{
     width: 3rem;
+}
+.FooterconT{
+    position: absolute;
+    bottom: 0;
 }
 /* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
 @media (max-width: 750px) {

@@ -35,8 +35,8 @@
            </div></form>
         </div>
         <div id="popup2" class="overlay">
-            <div class="popup">
-                <form action="{% url 'register' %}" method="POST">
+            
+                <form action="{% url 'register' %}" method="POST" class="popup">
                     {% csrf_token %}
                 <a class="close" href="#">&times;</a>
                 <h4>Sign Up</h4>
@@ -56,7 +56,7 @@
                 <div class="signin"><p>Already have an account?</p><a href="#popup1">Sign in</a></div>
                 
             </form>
-           </div>
+           
         
         </div>
         <!-- Navbar -->

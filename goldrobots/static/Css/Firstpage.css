@@ -194,7 +194,7 @@ header .right .language img:nth-child(2){
     height: 100%;
 }
 footer {
-    width: 85%;
+    width: 100%;
     padding: 2rem;
     background-color: #1E2126;
     display: flex;

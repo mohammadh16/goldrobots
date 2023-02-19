@@ -1,16 +1,17 @@
 .contract{
     width: 80%;
-    margin-top: 6rem;
+    margin-top: 10%; /* ///New Edit//// */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    
 
 }
 .contract .leftSide{
     width: 35%;
-    height: 28rem;
+    height: 30rem; /* ///New Edit//// */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -67,7 +68,7 @@
 }
 .contract .leftRight{
     width: 64%;
-    height: 28rem;
+    height: 30rem; /* ///New Edit//// */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -174,7 +175,7 @@
 .ball h5{
     color: rgba(0, 0, 0, 0.492) ;
     font-size: 10px;
-    font-weight: 800;
+    
 }
 .chartProfit .legends .downL{
    width: 100%;
@@ -469,6 +470,8 @@ position: absolute;
 .e-accumulationchart{
     height: 2rem;
 }
+
+
 
 /* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
 @media (max-width: 750px) {

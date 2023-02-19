@@ -24,9 +24,11 @@
     color: #757575;
     border-radius: 5px;
     margin: 5px 0;
+    overflow: hidden;
 }
 .mainDashboard .firstLayer .box:nth-child(1){
     width: 18%;
+    text-align: center;
 }
 .mainDashboard .firstLayer .box h4{
     margin-top: 10px;
@@ -243,15 +245,16 @@
     margin-right: 15px;
     position: absolute;
     left: 0;
+    
 }
 .thirdLayer .box .mainTrader .trade .progressT{
-    width: 85%;
+    width: 70%;
     height: 80%;
     display: flex;
     align-items: center;
     justify-content: left;
     position: relative;
-    margin-left: 3rem;
+    margin-left: 5rem;
 }
 .thirdLayer .box .mainTrader .trade .progressT .row{
     height: 100%;
@@ -315,19 +318,15 @@ svg {
     justify-content: center;
     flex-direction: column;
     color: #757575;
-    
 
   }
   .thirdLayer .box .Contacs .person img{
     width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
   }
   .thirdLayer .box .Contacs .person h4{
     margin: 10px 0;
     text-align: center;
-    overflow: hidden;
-    font-size: 12px ;
+    font-size: 11px;
   }
   .thirdLayer .box .Contacs .person .socialMedia{
     width: 100%;
@@ -362,6 +361,7 @@ svg {
     height: 70%;
     cursor: pointer;
   }
+ 
   .secondLayer .box .calendar{
     width: 70%;
     height: 70%;
@@ -391,6 +391,8 @@ svg {
     font-size: 28px;
   }
 
+ 
+
   .logoFooter{
     width: 100%;
     display: flex;
@@ -403,7 +405,6 @@ svg {
 .logoFooter img{
     width: 14rem;
 }
-
 /* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
 @media (max-width: 750px) {
     .mainDashboard .firstLayer .box{

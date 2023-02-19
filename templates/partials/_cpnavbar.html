@@ -3,15 +3,15 @@
 <div id="mySidenav" class="sidenav">
     <a href="{% url 'index' %}" class="header"><img src="{% static 'images/Group550.png' %}" alt=""></a>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="{% url 'profile' %}">Profile</a>
-    <a href="{% url 'dashboard' %}">Dashboard</a>
-    <a href="{% url 'bank' %}">Bank</a>
-    <a href="{% url 'contractprofit' %}">Contracts</a>
-    <a href="{% url 'setting' %}">Contract Setting</a>
+    <a class="pageName" href="{% url 'profile' %}">Profile</a>
+    <a class="pageName" href="{% url 'dashboard' %}">Dashboard</a>
+    <a class="pageName" href="{% url 'bank' %}">Bank</a>
+    <a class="pageName" href="{% url 'contractprofit' %}">Contracts</a>
+    <a class="pageName" href="{% url 'setting' %}">Contract Setting</a>
     
     {% if user.is_authenticated %}
-      <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
-      <form action="{% url 'logout' %}" method="POST" id="logout">
+      <a href="javascript:{document.getElementById('logout').submit()}" class="pageName">Logout</a>
+      <form action="{% url 'logout' %}" method="POST" id="logout" >
         {% csrf_token %}
         <input type="hidden">
       </form>

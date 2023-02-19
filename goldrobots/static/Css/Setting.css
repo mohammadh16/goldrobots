@@ -86,6 +86,10 @@
   @media (max-width: 750px) {
     .settingForm{
      margin-bottom: 7rem;
+     width: 95%;
+    }
+    .settingForm .btnStyle button{
+        width: 90%; 
     }
     .settingForm .inputsInfo .items{
         width: 100%;
