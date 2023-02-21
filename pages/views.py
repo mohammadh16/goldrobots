@@ -211,6 +211,7 @@ def signin(request):
             login(request,user)
             return redirect('profile')
         else:
+            messages.error(request, 'passwords do not match')
             return redirect('index')
     else:
             return render(request,'pages/index.html')

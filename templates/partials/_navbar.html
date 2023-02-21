@@ -52,7 +52,7 @@
 
                   {% for account in accounts %}
                   {% if account.accountname == user.username %}
-                  <a href="{% url 'dashboard' %}"><img src="{{ account.photo.url }}" style="border-radius: 50%;" alt="MaskGroup1"></a>
+                  <a href="{% url 'profile' %}"><img src="{{ account.photo.url }}" style="border-radius: 50%;" alt="MaskGroup1"></a>
                   {% endif %}
                   {% endfor %}
             </div>
