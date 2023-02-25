@@ -14,3 +14,32 @@ function openCity(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+// <!-- /* ///////////////////////////////NEG//////////////////////////////////// */ -->
+
+
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("branch");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function() {
+var current = document.getElementsByClassName("activeBank");
+if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" activeBank", "");
+}
+this.className += " activeBank";
+});
+}
+
+var header = document.getElementById("myDIV2");
+var btns = header.getElementsByClassName("branch");
+for (var i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function() {
+var current = document.getElementsByClassName("activeBank");
+if (current.length > 0) { 
+    current[0].className = current[0].className.replace(" activeBank", "");
+}
+this.className += " activeBank";
+});
+}
+
+// <!-- /* ///////////////////////////////NEG//////////////////////////////////// */ -->

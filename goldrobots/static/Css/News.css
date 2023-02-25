@@ -69,6 +69,9 @@
     margin: 0 5px;
     cursor: pointer;
 }
+.activePoint {
+    background-color: rgba(0, 0, 0, 0.669);
+}
 .w3-center2{
     width: 50%;
     height: 3rem;

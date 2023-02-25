@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 8rem;
+    /* margin-bottom: 8rem; */
 }
 .mainDashboard .firstLayer{
     width: 100%;
@@ -322,6 +322,8 @@ svg {
   }
   .thirdLayer .box .Contacs .person img{
     width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
   }
   .thirdLayer .box .Contacs .person h4{
     margin: 10px 0;
@@ -390,20 +392,27 @@ svg {
     top: 90px;
     font-size: 28px;
   }
-
- 
-
-  .logoFooter{
-    width: 100%;
+  .footerCp {
+    width: 100%; 
     display: flex;
     align-items: center;
     justify-content: left;
-    padding: 2rem 8rem;
-    position: absolute;
-    bottom: 0;
+    margin-top: 2rem;
+    
+    
 }
-.logoFooter img{
-    width: 14rem;
+.footerCp .logo-version {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.footerCp .logo-version h5{
+    margin-left: 1rem;
+    color: rgb(0, 0, 0);
+}
+.footerCp .logo-version img{
+    width: 5rem;
 }
 /* /////////////////////////////////////////////////responsive////////////////////////////////////////////////// */
 @media (max-width: 750px) {

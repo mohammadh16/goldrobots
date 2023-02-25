@@ -12,145 +12,154 @@
         <div class="Main-Cp">
             <div class="mainTab">
                                 
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'Bank')" id="defaultOpen">Bank Accounts</button>
-                    <button class="tablinks" onclick="openCity(event, 'Deposit')">Deposit</button>
-                    <button class="tablinks" onclick="openCity(event, 'Payment')">Payment History</button>
-                    <button class="tablinks" onclick="openCity(event, 'Withdraw')">Withdraw</button>
-                </div>
-                
-                <div id="Bank" class="tabcontent">
-                    <div class="inputs">
-                        <div class="item">
-                            <label for="">Bank Name</label>
-                            <input type="text">
-                        </div>
-                        <div class="item">
-                            <label for="">Country</label>
-                            <input type="text">
-                        </div>
-                        <div class="item">
-                            <label for="">Account number</label>
-                            <input type="text">
-                        </div>
-                        <div class="item">
-                            <label for="">Currency</label>
-                            <input type="text">
-                        </div>
-                        <div class="item">
-                            <label for="">Swift code</label>
-                            <input type="text">
-                        </div>
-                        
-                        <div class="btnAdd">
-                            <button>Add Bank</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="Deposit" class="tabcontent">
-                    <div class="inputs">
-                        <div class="itemBranch">
-                            <label for="">Payment system</label>
-                            <a class="branch">
-                                <div class="visaGroup">
-                                    <img class="Paypal" src="{% static 'images/Mastercard-logo.svg.png' %}" alt="">
-                                    <img class="Visa" src="{% static 'images/visa-card-logo-9.png' %}" alt="">
+                            <div class="tab">
+                                <button class="tablinks" onclick="openCity(event, 'Bank')" id="defaultOpen">Bank Accounts</button>
+                                <button class="tablinks" onclick="openCity(event, 'Deposit')">Deposit</button>
+                                <button class="tablinks" onclick="openCity(event, 'Payment')">Payment History</button>
+                                <button class="tablinks" onclick="openCity(event, 'Withdraw')">Withdraw</button>
+                            </div>
+                            
+                            <div id="Bank" class="tabcontent">
+                                <div class="inputs">
+                                    <div class="item">
+                                        <label for="">Bank Name</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="item">
+                                        <label for="">Country</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="item">
+                                        <label for="">Account number</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="item">
+                                        <label for="">Currency</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="item">
+                                        <label for="">Swift code</label>
+                                        <input type="text">
+                                    </div>
+                                    
+                                    <div class="btnAdd">
+                                        <button>Add Bank</button>
+                                    </div>
                                 </div>
-                                <h6>MasterCard</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="perfect" src="{% static 'images/2.png' %}" alt="">
-                                <h6>Perfect money</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="webmoney" src="{% static 'images/WebMoney-logo.png' %}" alt="">
-                                <h6>WebMoney</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="Papara" src="{% static 'images/Papara_Logo.png' %}" alt="">
-                                <h6>Papara</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="Crypto" src="{% static 'images/Group554.png' %}" alt="">
-                                <h6>Crypto</h6>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <label for="">Amount</label>
-                            <input type="text">
-                        </div>
-                       
-                        
-                        <div class="btnAdd">
-                            <button>Deposit</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="Payment" class="tabcontent">
-                    <div class="inputsPay">
-                        {% for payment in payment_history %}
-                        {% if payment.account.accountname == user.username %}
-                      <div class="rowPay">
-                         <h3>{{payment.date}}</h3>
-                         <h3>{{payment.hour}}</h3>
-                         <h3>{{payment.type}}</h3>
-                         <h3>{{payment.status}}</h3>
-                         <h3>{{payment.via}}  </h3>
-                         <h3>${{payment.amount|intcomma}}</h3>
-                      </div>
-                      {% endif %}
-                      {% endfor %}
-                      
-                    </div>
-                </div>
-                <div id="Withdraw" class="tabcontent">
-                    <div class="inputs">
-                        <div class="itemBranch">
-                            <label for="">Payment system</label>
-                            <a class="branch">
-                                <div class="visaGroup">
-                                    <img class="Paypal" src="{% static 'images/Mastercard-logo.svg.png' %}" alt="">
-                                    <img class="Visa" src="{% static 'images/visa-card-logo-9.png' %}" alt="">
+                            </div>
+                            <div id="Deposit" class="tabcontent">
+                                <div class="inputs">
+                                    <div class="itemBranch" id="myDIV">
+                                        <div class="itemBranch" id="myDIV">
+                                        <label for="">Payment system</label>
+                                        <a class="branch">
+                                            <div class="visaGroup">
+                                                <img class="Paypal" src="{% static 'images/Mastercard-logo.svg.png' %}" alt="">
+                                                <img class="Visa" src="{% static 'images/visa-card-logo-9.png' %}" alt="">
+                                            </div>
+                                            <h6>MasterCard</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="perfect" src="{% static 'images/2.png' %}" alt="">
+                                            <h6>Perfect money</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="webmoney" src="{% static 'images/WebMoney-logo.png' %}" alt="">
+                                            <h6>WebMoney</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="Papara" src="{% static 'images/Papara_Logo.png' %}" alt="">
+                                            <h6>Papara</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="Crypto" src="{% static 'images/Group554.png' %}" alt="">
+                                            <h6>Crypto</h6>
+                                        </a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <label for="">Amount</label>
+                                        <input type="text">
+                                    </div>
+                                    <div class="btnAdd">
+                                        <button>Deposit</button>
+                                    </div>
                                 </div>
-                                <h6>MasterCard</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="perfect" src="{% static 'images/2.png' %}" alt="">
-                                <h6>Perfect money</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="webmoney" src="{% static 'images/WebMoney-logo.png' %}" alt="">
-                                <h6>WebMoney</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="Papara" src="{% static 'images/Papara_Logo.png' %}" alt="">
-                                <h6>Papara</h6>
-                            </a>
-                            <a class="branch">
-                                <img class="Crypto" src="{% static 'images/Group554.png' %}" alt="">
-                                <h6>Crypto</h6>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <label for="">Amount</label>
-                            <input type="text">
-                        </div>
-                        
-                        
-                        <div class="btnAdd">
-                            <button>Withdraw</button>
-                        </div>
-                    </div>
-                </div>
+                            </div>
+                            <div id="Payment" class="tabcontent">
+                                <div class="inputsPay">
+                                    {% for payment in payment_history %}
+                                    {% if payment.account.accountname == user.username %}
+                                <div class="rowPay">
+                                    <h3>{{payment.date}}</h3>
+                                    <h3>{{payment.hour}}</h3>
+                                    <h3>{{payment.type}}</h3>
+                                    <h3>{{payment.status}}</h3>
+                                    <h3>{{payment.via}}  </h3>
+                                    <h3>${{payment.amount|intcomma}}</h3>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                                
+                                </div>
+                            </div>
+                            <div id="Withdraw" class="tabcontent">
+                                <div class="inputs">
+                                    <div class="itemBranch" id="myDIV2" >
+                                        <label for="">Payment system</label>
+                                        <a class="branch">
+                                            <div class="visaGroup">
+                                                <img class="Paypal" src="{% static 'images/Mastercard-logo.svg.png' %}" alt="">
+                                                <img class="Visa" src="{% static 'images/visa-card-logo-9.png' %}" alt="">
+                                            </div>
+                                            <h6>MasterCard</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="perfect" src="{% static 'images/2.png' %}" alt="">
+                                            <h6>Perfect money</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="webmoney" src="{% static 'images/WebMoney-logo.png' %}" alt="">
+                                            <h6>WebMoney</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="Papara" src="{% static 'images/Papara_Logo.png' %}" alt="">
+                                            <h6>Papara</h6>
+                                        </a>
+                                        <a class="branch">
+                                            <img class="Crypto" src="{% static 'images/Group554.png' %}" alt="">
+                                            <h6>Crypto</h6>
+                                        </a>
+                                    
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <label for="">Amount</label>
+                                        <input type="text">
+                                    </div>
+                                    
+                                    
+                                    <div class="btnAdd">
+                                        <button>Withdraw</button>
+                                    </div>
+                                </div>
+                            </div>
                 
                
 
 
             </div>
+            <footer class="footerCpD">
+                <div class="logo-version">
+                    <img src="{% static 'images/4_6037255873800178752.png' %}" alt="Logo">
+                    <h5>© 2022 All Rights Reserved Goldrobots</h5>
+                </div>
+             </footer>
+            
         </div>
-        <div class="logoFooter">
-            <img src="{% static 'images/Group550.png' %}" alt="">
-        </div>
+        
+        
     </div>
 </body>
+
 {% endblock %}

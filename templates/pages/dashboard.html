@@ -51,15 +51,15 @@
                                         </div>
                                         <div class="mainculom">
                                             <div class="level" id="t11"></div>
-                                            <script>
-                                                var source = document.getElementById("t1");    
-                                                var level = document.getElementById("t11");
-                                                    level.style.height = source.innerHTML;
-                                        </script>
                                         </div>
                                         <div class="percentage" id="t1">
                                             <h5>%{{account.equity_percentage}}</h5>
                                         </div>
+                                        <script>
+                                            var source = document.getElementById("t1");    
+                                            var level = document.getElementById("t11");
+                                                level.style.height = source.innerHTML;
+                                    </script>
                                     </div>
                                 </div>
                                 <div class="box">
@@ -401,12 +401,16 @@
                                 </div>
 
                             </div>
+                            <footer class="footerCp">
+                                <div class="logo-version">
+                                    <img src="{% static 'images/4_6037255873800178752.png' %}" alt="Logo">
+                                    <h5>© 2022 All Rights Reserved Goldrobots</h5>
+                                </div>
+                             </footer>
                         </div>
                         {% endif %}
                     {% endfor %}
-        <div class="logoFooter">
-            <img src="{% static 'images/Group550.png' %}" alt="">
-        </div>
+                    
     </div>
 
 </body>

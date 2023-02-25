@@ -24,7 +24,7 @@
     </div>
     <div class="proImg">
       <div class="dropdown">
-        <img src="{% static 'images/English.png' %}" alt="language">
+        <img class="flagLanPro" src="{% static 'images/English.png' %}" alt="language">
         <div class="dropdown-content">
             <div class="flag"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></div>
              <div class="flag"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></div>
@@ -32,7 +32,7 @@
       </div>
       {% for account in accounts %}
       {% if account.accountname == user.username %}
-      <a href="{% url 'profile' %}"><img src="{{ account.photo.url }}" style="border-radius: 50%;" alt="MaskGroup1"></a>
+      <a href="{% url 'profile' %}"><img class="ImgHeader" src="{{ account.photo.url }}" style="border-radius: 50%;" alt="MaskGroup1"></a>
       {% endif %}
       {% endfor %}
     </div>

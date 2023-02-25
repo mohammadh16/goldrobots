@@ -50,11 +50,22 @@
                     </div>
                     
                     
-                    <div class="w3-center2 w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" >
+                    <div class="w3-center2 w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" id="myDIVNews" >
                     
-                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white activePoint" onclick="currentDiv(1)"></span>
                     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
                     <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                    <script>
+                        var header = document.getElementById("myDIVNews");
+                        var btns = header.getElementsByClassName("w3-badge");
+                        for (var i = 0; i < btns.length; i++) {
+                          btns[i].addEventListener("click", function() {
+                          var current = document.getElementsByClassName("activePoint");
+                          current[0].className = current[0].className.replace(" activePoint", "");
+                          this.className += " activePoint";
+                          });
+                        }
+                        </script>
                     </div>
                 </div>
             </div>

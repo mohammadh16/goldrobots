@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     padding: 3rem 2rem;
-    margin-bottom: 10rem;
+    /* margin-bottom: 10rem; */
 }
 .settingForm .inputsInfo{
     width: 100%;
