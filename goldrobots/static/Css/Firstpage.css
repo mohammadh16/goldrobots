@@ -179,8 +179,14 @@ header .right .language .flagLan{
     align-items: center;
     flex-direction: column;
 }
+.videos .topVideo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .videos .Mainplace{
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -188,13 +194,14 @@ header .right .language .flagLan{
     margin-top: 2rem;
 }
 .videos .Mainplace .scren{
-    width: 20rem;
-    height: 13rem;
+    width: 50%;
+    height: 15rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 10px 15px;
+    
 }
 .videos .Mainplace .scren .videoStyle{
     position: absolute;
@@ -299,6 +306,15 @@ header .right .language .flagLan{
     .support{
         right:2rem;
         width:2rem;
+        }
+    .videos .topVideo{
+        
+            flex-direction: column;
+        }
+        .videos .Mainplace .scren{
+            width: 100%;
+           
+            
         }
     
 }

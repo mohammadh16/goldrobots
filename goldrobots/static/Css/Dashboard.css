@@ -102,7 +102,6 @@
     position: relative;
 }
 .colorPercent{
-    width: 45%;
     height: 100%;
     background-color: #BA6D18;
     border-radius: 20px;
@@ -132,7 +131,7 @@
     position: relative;
 }
 .trendLevel .percentage h5:nth-child(1){
-    bottom: 35%;
+    /* bottom: 35%; */
     position: absolute;
 }
 .trendLevel .percentageBase{
@@ -158,7 +157,6 @@
 }
 .trendLevel .mainculom .level{
    width: 100%;
-   height: 35%;
    position: absolute;
    bottom: 0;
    background-color: #BA6D18;

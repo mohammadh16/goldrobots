@@ -50,16 +50,26 @@
                                             <h5>%100</h5>
                                         </div>
                                         <div class="mainculom">
-                                            <div class="level" id="t11"></div>
+                                            <div class="level" style="color: #ffffff00;">{{account.equity_percentage}}</div>
+                                              
                                         </div>
-                                        <div class="percentage" id="t1">
-                                            <h5>%{{account.equity_percentage}}</h5>
+                                        <div class="percentage">
+                                            <h5 class="t1">{{account.equity_percentage}}%</h5> 
                                         </div>
-                                        <script>
-                                            var source = document.getElementById("t1");    
-                                            var level = document.getElementById("t11");
-                                                level.style.height = source.innerHTML;
-                                    </script>
+                                        
+                                    <script>
+                                        var level = document.getElementsByClassName("t1");
+                                        for (var i = 0, max = level.length; i < max; i++) {
+                                            level[i].style.bottom = level[i].innerHTML;
+                                        }       
+                                </script>
+                                <script>
+                                    var level = document.getElementsByClassName("level");
+                                    for (var i = 0, max = level.length; i < max; i++) {
+                                        level[i].style.height = level[i].innerHTML+"%";
+                                    }       
+                            </script> 
+                                        
                                     </div>
                                 </div>
                                 <div class="box">
@@ -71,12 +81,18 @@
                                     <div class="down">
                                         <h3>Percentage in trade</h3>
                                         <div class="progress">
-                                            <div class="colorPercent">
-
+                                            <div class="colorPercent" style="font-size: 0;">{{account.percentage_in_trade}}%
                                             </div>
                                         </div>
                                         <h3>{{account.percentage_in_trade}}%</h3>
                                     </div>
+                                    <script>
+                                        var level = document.getElementsByClassName("colorPercent");
+                                        for (var i = 0, max = level.length; i < max; i++) {
+                                            level[i].style.width = level[i].innerHTML;
+                                        }       
+                                </script>
+                                    
                                 </div>
                                 <div class="box">
                                     <h3 class="headBox">Remaining days</h3>
