@@ -206,18 +206,21 @@
     width: 26%;
 }
 .thirdLayer .condition{
+    overflow: auto;
     width: 90%;
     height: 90%;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
 }
 .thirdLayer .condition .item{
     width: 100%;
-    height: 3rem;
     display: flex;
+    padding: 8px 0;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2px;
     border-bottom: 1px solid #757575;
 }
 .thirdLayer .condition .item h4:nth-child(1){
@@ -226,7 +229,7 @@
 .thirdLayer .box .mainTrader{
     width: 95%;
     height: 90%;
-    overflow:scroll;
+    overflow:auto;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -234,12 +237,12 @@
 }
 .thirdLayer .box .mainTrader .trade{
     width: 100%;
-    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: left;
     margin: 4px 0;
     position: relative;
+    padding: 5px 0;
 }
 .thirdLayer .box .mainTrader .trade h5{
     margin-right: 15px;
@@ -249,7 +252,7 @@
 }
 .thirdLayer .box .mainTrader .trade .progressT{
     width: 70%;
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: left;
