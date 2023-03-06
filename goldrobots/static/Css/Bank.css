@@ -147,6 +147,11 @@
   padding: 0 2rem;
   margin: 5px 0;
 }
+.tabcontent .inputsPay .rowPay h3{
+  width: 10rem;
+  text-align: center;
+}
+
 .tabcontent .inputs .item label{
   width: 100%;
   margin-bottom: 5px;

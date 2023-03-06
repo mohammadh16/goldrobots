@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} | ForgetPassword{% endblock %}
+
+
+{% block content %}
+<body>
+    <div class="containerForget">
+        
+        <div  class="overlayFor">
+            <form method="POST"  action="{% url 'reset_password' %}">
+                {% csrf_token %}
+                
+            <div class="popup popupSignIn">
+                <h4>Forget your password?</h4>
+                <h6>Please enter the email associated with your account and we will send you a link to reset your password.</h6>
+                <br>
+                {{form.as_p}}
+                <br>
+                <br>
+               
+                <div class="signinLeft"><p>Already know your password?</p><a href="{% url 'index' %}">Sign in</a></div>
+                <div class="btnLog">
+                    <button>Reset Password</button>  
+                </div>
+                </form>
+           </div>
+        </div>
+        </div>
+</body>
+
+{% endblock %}

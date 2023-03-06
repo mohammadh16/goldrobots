@@ -1,5 +1,26 @@
 {% load static %}
+<div class="chat">
+  <div id="ChatOpen" class="popoupChat">
+      <h1 onclick="CloseChat()">X</h1>
+      <div class="textchat">
+          <h6>Hello, Welcome to Bulima customer support. How can we help you?</h6>
+      </div>
+      <input type="text" placeholder="Type here" class="chatBox">
+  </div>
+  <img src="{% static 'images/support.png' %}" alt="support" class="support" onclick="OpenChat()" >
 
+
+
+</div>
+<script>
+  function  OpenChat(){
+      document.getElementById ( "ChatOpen" ).style.display =  "flex";
+  }
+  function  CloseChat(){
+      document.getElementById ( "ChatOpen" ).style.display =  "none";
+  }
+  
+</script>
 <div id="mySidenav" class="sidenav">
     <a href="{% url 'index' %}" class="header"><img src="{% static 'images/Group550.png' %}" alt=""></a>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
