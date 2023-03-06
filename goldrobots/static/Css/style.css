@@ -1,0 +1,14 @@
+.swal-modal {
+    font-size: 1.6rem !important;
+    font-family: Seguisb;
+    background-color: gold;
+  }
+  .swal-title {
+    font-size: 1.6rem !important;
+    font-family: Seguisb;
+    color: black;
+  }
+  .swal-button{
+    background-color: black;
+    color: gold;
+  }
