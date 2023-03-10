@@ -9,24 +9,23 @@
 <body>
     <div class="containerForget">
         
-        <div  class="overlayFor">
-            <form method="POST"  action="{% url 'reset_password' %}">
+            <form method="POST" class="overlayFor" action="{% url 'reset_password' %}">
                 {% csrf_token %}
                 
-            <div class="popup popupSignIn">
+            <div class="popup">
                 <h4>Forget your password?</h4>
-                <h6>Please enter the email associated with your account and we will send you a link to reset your password.</h6>
-                <br>
+                <h6 class="guideForget">Please enter the email associated with your account and we will send you a link to reset your password.</h6>
+               
+                <br class="NewInputF">
                 {{form.as_p}}
                 <br>
                 <br>
                
-                <div class="signinLeft"><p>Already know your password?</p><a href="{% url 'index' %}">Sign in</a></div>
+                <div class="signForget"><p>Already know your password?</p><a href="{% url 'index' %}">Sign in</a></div>
                 <div class="btnLog">
                     <button>Reset Password</button>  
                 </div>
                 </form>
-           </div>
         </div>
         </div>
 </body>

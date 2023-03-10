@@ -1,120 +1,154 @@
 @font-face {
-    font-family: Seguisb;
-    src: url(../font/seguisb.ttf);
-  }
+  font-family: Seguisb;
+  src: url(../font/seguisb.ttf);
+}
 
-  
+
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .errorlist{
-  display: none;
+background-color: #F2D884;
 }
 .containerForget{
-    width: 100%;
-    min-height: 100vh;
-    background: url(../images/close-up-photo-gold-bar-black-background-copy-space.png) no-repeat center center/cover ;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  font-family: "Seguisb";
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/close-up-photo-gold-bar-black-background-copy-space.png) no-repeat center center/cover ;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+font-family: "Seguisb";
 
 }
 .containerForget .overlayFor{
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.53);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: scroll;
-    padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.53);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  padding: 2rem;
 }
 .containerForget .overlayFor .popup{
-    width: 25rem;
-    background-color: #fff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    padding: 2rem;
-    margin-top: 3rem;
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 .containerForget .overlayFor .popup h4{
-    margin-top: 2rem;
-  color: #333;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+color: #333;
+margin-bottom: 1rem;
 
 }
 .popup .boxInput {
-    width: 80%;
-    height: 2.5rem;
-    margin: 1rem 0;
+  width: 80%;
+  height: 2.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.312);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.popup .boxInput .logoLogin{
+  width: 13%;
+  height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(0, 0, 0, 0.312);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.popup .boxInput .logoLogin img{
+  position: absolute;
+  width: 60%;
+}
+.popup .boxInput input{
+  width: 87%;
+  height: 100%;
+  border: none;
+  background-color: #06d85e00;
+  padding-left: 10px;
+  font-size: 15px;
+}
+.popup .boxInput input:focus{
+  outline: none;
+}
+.popup .boxInput input::placeholder{
+  color: #33333355;
+}
+.popup .remember{
+  width: 80%;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.popup .remember h5{
+  color: #333333a6;
+  font-size: 11px;
+  margin-left: 10px;
+}
+.popup .btnLog {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  
+}
+.popup .btnLog button{
+  padding: 10px;
+  width: 9rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #F2D884;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.guideForget{
+  width: 80% !important;
+}
+.signForget{
+  width: 80%;
+  display: flex;
+align-items: center;
+justify-content: left;
+margin-top: -2rem;
+margin-bottom: 1.7rem;
+font-size: 9px;
+}
+.signForget p{
+  color: #33333375;
+
+}
+.signForget a{
+  text-decoration: none;
+  color: #2a2828e7;
+  font-size: 10px;
+  margin-left: 5px;  }
+
+
+
+  #id_email{
+    height: 2rem !important;
     border-radius: 5px;
-    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.306) ;
+    width: 13rem;
+    padding: 0 0.5rem;
+font-family: "Seguisb";
+
   }
-  .popup .boxInput .logoLogin{
-    width: 13%;
-    height: 100%;
-      display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .popup .boxInput .logoLogin img{
-    position: absolute;
-    width: 60%;
-  }
-  .popup .boxInput input{
-    width: 87%;
-    height: 100%;
-    border: none;
-    background-color: #06d85e00;
-    padding-left: 10px;
-    font-size: 15px;
-  }
-  .popup .boxInput input:focus{
-    outline: none;
-  }
-  .popup .boxInput input::placeholder{
-    color: #33333355;
-  }
-  .popup .remember{
-    width: 80%;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-  }
-  .popup .remember h5{
-    color: #333333a6;
-    font-size: 11px;
-    margin-left: 10px;
-  }
-  .popup .btnLog {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    
-  }
-  .popup .btnLog button{
-    padding: 10px;
-    width: 9rem;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: #F2D884;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-  }
+  
