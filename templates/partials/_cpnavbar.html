@@ -1,9 +1,11 @@
 {% load static %}
+{% load i18n %}
+{% load humanize %}
 <div class="chat">
   <div id="ChatOpen" class="popoupChat">
       <h1 onclick="CloseChat()">X</h1>
       <div class="textchat">
-          <h6>Hello, Welcome to Bulima customer support. How can we help you?</h6>
+          <h6>{% trans "Hello, Welcome to Bulima customer support. How can we help you?" %}</h6>
       </div>
       <input type="text" placeholder="Type here" class="chatBox">
   </div>
@@ -24,14 +26,14 @@
 <div id="mySidenav" class="sidenav">
     <a href="{% url 'index' %}" class="header"><img src="{% static 'images/Group550.png' %}" alt=""></a>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="pageName" href="{% url 'profile' %}">Profile</a>
-    <a class="pageName" href="{% url 'dashboard' %}">Dashboard</a>
-    <a class="pageName" href="{% url 'bank' %}">Bank</a>
-    <a class="pageName" href="{% url 'contractprofit' %}">Contracts</a>
-    <a class="pageName" href="{% url 'setting' %}">Contract Setting</a>
+    <a class="pageName" href="{% url 'profile' %}">{% trans 'Profile' %}</a>
+    <a class="pageName" href="{% url 'dashboard' %}">{% trans 'Dashboard' %}</a>
+    <a class="pageName" href="{% url 'bank' %}">{% trans 'Bank' %}</a>
+    <a class="pageName" href="{% url 'contractprofit' %}">{% trans 'Contracts' %}</a>
+    <a class="pageName" href="{% url 'setting' %}">{% trans 'Contract Setting' %}</a>
     
     {% if user.is_authenticated %}
-      <a href="javascript:{document.getElementById('logout').submit()}" class="pageName">Logout</a>
+      <a href="javascript:{document.getElementById('logout').submit()}" class="pageName">{% trans 'Logout' %}</a>
       <form action="{% url 'logout' %}" method="POST" id="logout" >
         {% csrf_token %}
         <input type="hidden">
@@ -45,12 +47,27 @@
     </div>
     <div class="proImg">
       <div class="dropdown">
-        <img class="flagLanPro" src="{% static 'images/English.png' %}" alt="language">
-        <div class="dropdown-content">
-            <div class="flag"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></div>
-             <div class="flag"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></div>
-        </div>
-      </div>
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+
+        {% for lang in languages %}
+            {% if lang.code == 'en' %}
+                <a  href="/{{ lang.code }}/profile"><img class="flagLanPro" src="{% static 'images/English.png' %}" alt="language"></a>
+            {% endif %}
+        {% endfor %}
+    <div class="dropdown-content">
+        {% for lang in languages %}
+            {% if lang.code == 'en' %}
+                <a class="flagMulti"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></a>
+            {% endif %}
+
+            {% if lang.code == 'ar' %}
+                <a class="flagMulti" href="/{{ lang.code }}/profile"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></a>
+            {% endif %}
+        {% endfor %}
+    </div>
+  </div>
       {% for account in accounts %}
       {% if account.accountname == user.username %}
       <a href="{% url 'profile' %}"><img class="ImgHeader" src="{{ account.photo.url }}" style="border-radius: 50%;" alt="MaskGroup1"></a>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-
-{% block title %} | About Us{% endblock %}
+{% load i18n %}
+{% block title %} | {% trans 'Your Dashboard' %}{% endblock %}
 
 {% block content %}
 <body>
@@ -12,10 +12,9 @@
 <div class="mainAbout">
     <div class="Shadow">
         <div class="textAbout">
-            <h3>About Us</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact </p>
+            <h3>{% trans 'About Us' %}</h3>
+            <p> {% trans "Welcome to gold robots! We aim to offer our customers a variety of the latest robots. We’ve come a long way, so we know exactly which direction to take when supplying you with high quality yet budget friendly products. We offer all of this while providing excellent customer service and friendly support, we always keep an eye on the latest trends in robots and put our customers’ wishes first. That’s why we have satisfied customers all over the world and are thrilled to be a part of the robots industry. The interests of our customers are always top priority for us, so we hope you will enjoy our products as much as much as we enjoy making them available to you That is why we have satisfied customers all over the world and are thrilled to be a part of the robots industry.The interests of our customers are always too priority for us, so we hope you will enjoy our products as much as we enjoy making them available to you." %} 
+                 </p>
         </div>
         <img class="tower" src="{%  static 'images/khalifa.c5d5cdcc340e1b8739cf.jpg' %}" alt="tower">
     </div>

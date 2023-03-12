@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
+{% load i18n %}
 
-{% block title %} | All Contracts Overview{% endblock %}
+{% block title %} | {% trans 'All Contracts Overview' %}{% endblock %}
 {% block content %}
 <div class="container">
     <!-- Navbar -->
@@ -14,28 +15,28 @@
                     <div class="boxC">
                         <div class="logoContract">
                             <img src="{% static 'images/contract.png' %}" alt="contract">
-                            <h4>Contract {{contract.name}}</h4>
+                            <h4>{% trans 'Contract' %} {{contract.name}}</h4>
 
                         </div>
                         <div class="details">
                             <div class="item">
-                                <h5>Minimun duration</h5>
+                                <h5>{% trans 'Minimun duration' %}</h5>
                                 <h5>{{contract.minimum_duration}}</h5>
                             </div>
                             <div class="item">
-                                <h5>Minimun desposite</h5>
+                                <h5>{% trans 'Minimun desposite' %}</h5>
                                 <h5>$ {{contract.minimum_deposit|intcomma}}</h5>
                             </div>
                             <div class="item">
-                                <h5>Garantie percentage</h5>
+                                <h5>{% trans 'Garantie percentage' %}</h5>
                                 <h5>{{contract.garantie_percentage}}</h5>
                             </div>
                             <div class="item">
-                                <h5>Admin clients</h5>
+                                <h5>{% trans 'Admin clients' %}</h5>
                                 <h5>{{contract.admin_clients}}</h5>
                             </div>
                             <div class="item">
-                                <h5>Level</h5>
+                                <h5>{% trans 'Level' %}</h5>
                                 <h5>{{contract.level}}</h5>
                             </div>
                         </div>

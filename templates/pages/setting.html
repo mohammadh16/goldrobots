@@ -1,7 +1,7 @@
 {% extends 'cpbase.html' %}
 {% load static %}
-
-{% block title %} | Contract Extra Setting{% endblock %}
+{% load i18n %}
+{% block title %} | {% trans 'Contract Extra Setting' %}{% endblock %}
 
 {% block content %}
 <div class="containerCp">
@@ -11,11 +11,11 @@
 
 
     <div class="settingForm">
-        <h2>Contract Setting</h2>
+        <h2>{% trans 'Contract Setting' %}</h2>
         <div class="inputsInfo" >
            
             <div class="items">
-                <label for="">Choose Contract</label>
+                <label for="">{% trans 'Choose Contract' %}</label>
                 <select name="" id="">
                     <option value="">A</option>
                     <option value="">B</option>
@@ -24,7 +24,7 @@
                 </select>
             </div>
             <div class="items">
-                <label for="">Max usage deposit</label>
+                <label for="">{% trans 'Max usage deposit' %}</label>
                 <select name="" id="">
                     <option value="">35%</option>
                     <option value="">50%</option>
@@ -33,7 +33,7 @@
                 </select>
             </div>
             <div class="items">
-                <label for="">Leverage</label>
+                <label for="">{% trans 'Leverage' %}</label>
                 <select name="" id="">
                     <option value="">1:100</option>
                     <option value="">1:200</option>
@@ -42,7 +42,7 @@
                 </select>
             </div>
             <div class="items">
-                <label for="">Add extra day</label>
+                <label for="">{% trans 'Add extra day' %}</label>
                 <select name="" id="">
                     <option value="">5 days</option>
                     <option value="">10 days</option>
@@ -51,7 +51,7 @@
                 </select>
             </div>
             <div class="items">
-                <label for="">Trading timeframe</label>
+                <label for="">{% trans 'Trading timeframe' %}</label>
                 <select name="" id="">
                     <option value="">1 min</option>
                     <option value="">5 mins</option>
@@ -62,7 +62,7 @@
                 </select>
             </div>
             <div class="items">
-                <label for="">Time range</label>
+                <label for="">{% trans 'Time range' %}</label>
                 <select name="" id="">
                     <option value="">London </option>
                     <option value="">Tokyo</option>
@@ -70,7 +70,7 @@
                 </select>
             </div>
             <div class="btnStyle">
-                <a href="{% url 'dashboard' %}"><button>Submit</button></a>
+                <a href="{% url 'dashboard' %}"><button>{% trans 'Submit' %}</button></a>
             </div>
         </div>
     </div>

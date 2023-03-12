@@ -16,6 +16,7 @@ from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
 from django.utils.encoding import force_bytes,force_str
 from django.core.mail import EmailMessage
 from accounts.tokens import account_activation_token
+from django.utils.translation import gettext_lazy as _
 def index(request):
     accounts = Account.objects.all()
     context = {
@@ -211,7 +212,7 @@ def signin(request):
             login(request,user)
             return redirect('profile')
         else:
-            messages.error(request, 'passwords do not match')
+            messages.error(request, 'Username or password is not correct')
             return redirect('index')
     else:
             return render(request,'pages/index.html')

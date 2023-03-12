@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load i18n %}
 
 <html lang="en">
 <head>
@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="icon" href="{% static 'images/Layer2.png' %}">
     
-    <title>Gold Robots{% block title %}{% endblock %}</title>
+    <title>{% trans 'Gold Robots' %}{% block title %}{% endblock %}</title>
 </head>
 
 

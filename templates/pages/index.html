@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 
-{% block title %} | Welcome{% endblock %}
+{% block title %} | {% trans 'Welcome' %}{% endblock %}
 
 
 {% block content %}
@@ -14,7 +15,7 @@
                 {% csrf_token %}
             <div class="popup">
                 <a class="close" href="#">&times;</a>
-                <h4>Sign In</h4>
+                <h4>{% trans 'Sign In'  %}</h4>
                 <div class="boxInput">
                     <div class="logoLogin"><img src="{% static 'images/user.png' %}" alt=""></div>
                     <input type="username" name="username" placeholder="Username" required>
@@ -25,13 +26,13 @@
                 </div>
                 <div class="remember">
                     <input type="checkbox">
-                    <h5>Remember me</h5>
+                    <h5>{% trans 'Remember me'  %}</h5>
                 </div>
                     <div class="btnLog">
-                    <button>Login</button>
+                    <button>{% trans 'Login'  %}</button>
                     </div>
-                <a class="forgotP" href="{% url 'reset_password' %}">Forgot your password?</a>
-                <div class="signin"><p>New here?</p><a href="#popup2">Sign up</a></div>
+                <a class="forgotP" href="{% url 'reset_password' %}">{% trans 'Forgot your password?'  %}</a>
+                <div class="signin"><p>{% trans 'New here?'  %}</p><a href="#popup2">{% trans 'Sign up'  %}</a></div>
            </div></form>
         </div>
         <div id="popup2" class="overlay">
@@ -39,7 +40,7 @@
                 <form action="{% url 'register' %}" method="POST" class="popup">
                     {% csrf_token %}
                 <a class="close" href="#">&times;</a>
-                <h4>Sign Up</h4>
+                <h4>{% trans 'Sign up'  %}</h4>
                 <input class="signUpInput" type="text" placeholder="Title*" name="title_signup" required>
                 <input class="signUpInput" type="text" placeholder="Username*" name="username_signup" required>
                 <input class="signUpInput" type="text" placeholder="First Name*" name="firstname_signup" required>
@@ -51,9 +52,9 @@
                 <input class="signUpInput" type="text" placeholder="Country*"name="country_signup" required>
                 <input class="signUpInput" type="text" placeholder="Preferred Contact Language*" name="language_signup" required>
                 <div class="btnLog">
-                    <button>Join</button>
+                    <button>{% trans 'Join'  %}</button>
                 </div>
-                <div class="signin"><p>Already have an account?</p><a href="#popup1">Sign in</a></div>
+                <div class="signin"><p>{% trans 'Already have an account?'  %}</p><a href="#popup1">{% trans 'Sign in'  %}</a></div>
                 
             </form>
            
@@ -69,36 +70,36 @@
             <div class="NameCompany">
                 
                 <img src="{% static 'images/Layer -1.png' %}" alt="LOGO">
-                <h3>We design all in one tech solution for the complex<br/>needs of the management industry.</h3>
+                <h3>{% trans 'We design all in one tech solution for the complex<br/>needs of the management industry.' %}</h3>
             </div>
          </div>
          <div class="invest">
-            <h2>Reasons to invest in gold</h2>
+            <h2>{% trans 'Reasons to invest in gold' %}</h2>
             <div class="box-place">
                 <div class="box">
                     <img src="{% static 'images/gold-bars-1.png' %}" alt="Gold">
-                    <h5>1.It's easy to buy store and sell</h5>
-                    <p>Gold can come in a physical form or it can be...</p>
+                    <h5>{% trans '1.Its easy to buy store and sell' %}</h5>
+                    <p>{% trans 'Gold can come in a physical form or it can be...' %}</p>
                 </div>
                 <div class="box">
                     <img src="{% static 'images/MaskGroup245.jpg' %}" alt="Gold">
-                    <h5>2.It can help with inflation</h5>
-                    <p>while gold's ability to battle inflation is incons...</p>
+                    <h5>{% trans '2.It can help with inflation' %}</h5>
+                    <p>{% trans 'while golds ability to battle inflation is incons...' %}</p>
                 </div>
                 <div class="box">
                     <img src="{% static 'images/MaskGroup246.jpg' %}" alt="Gold">
-                    <h5>3.It can diversify your portfolio</h5>
-                    <p>Gold can help diversify your portfolio. So in the...</p>
+                    <h5>{% trans '3.It can diversify your portfolio' %}</h5>
+                    <p>{% trans 'Gold can help diversify your portfolio. So in the...' %}</p>
                 </div>
             </div>
          </div>
          <div class="about">
             <div class="shadow">
-                Although the U.S. dollar is one of the world's most important reserve currencies, when the value of the dollar falls against other currencies as it did between 1998 and 2008, this often prompts people to flock to the security of gold, which raises gold prices.The price of gold nearly tripled between 1998 and 2008,reaching the $1,000 an ounce milestone in early 2008 and nearly doubling between 2008 and 2012 , hitting above the $2,000 mark. 1 The decline is the U.S. dollar occurred for a number of reasons , including the country's large budget and trade deficits and a large increase in the mony supply.
+                {% trans "Although the U.S. dollar is one of the world's most important reserve currencies, when the value of the dollar falls against other currencies as it did between 1998 and 2008, this often prompts people to flock to the security of gold, which raises gold prices.The price of gold nearly tripled between 1998 and 2008,reaching the $1,000 an ounce milestone in early 2008 and nearly doubling between 2008 and 2012 , hitting above the $2,000 mark. 1 The decline is the U.S. dollar occurred for a number of reasons , including the country's large budget and trade deficits and a large increase in the mony supply." %}
             </div>
          </div>
          <div class="videos">
-            <h2>Why you should invest in gold</h2>
+            <h2>{% trans 'Why you should invest in gold' %}</h2>
             <div class="Mainplace">
                 <div class="topVideo">
                 <div class="scren">

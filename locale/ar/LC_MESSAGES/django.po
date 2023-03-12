@@ -1,0 +1,488 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-12 12:02+0100\n"
+"PO-Revision-Date: 2023-03-12 12:04+0000\n"
+"Last-Translator:   <mohammadh16@yahoo.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\templates\base.html:25 .\templates\cpbase.html:25
+msgid "Gold Robots"
+msgstr "الروبوتات الذهبية"
+
+#: .\templates\pages\ForgetPage.html:5
+msgid "ForgetPassword"
+msgstr "نسيت كلمة السر"
+
+#: .\templates\pages\ForgetPage.html:16
+msgid "Forget your password?"
+msgstr "نسيت كلمة السر"
+
+#: .\templates\pages\ForgetPage.html:17
+msgid ""
+"Please enter the email associated with your account and we will send you a "
+"link to reset your password."
+msgstr ""
+"يرجى إدخال البريد الإلكتروني المرتبط بحسابك وسنرسل لك رابطًا لإعادة تعيين "
+"كلمة المرور الخاصة بك."
+
+#: .\templates\pages\ForgetPage.html:24
+msgid "Already know your password?"
+msgstr ""
+
+#: .\templates\pages\ForgetPage.html:26
+msgid "Reset Password"
+msgstr ""
+
+#: .\templates\pages\about.html:4 .\templates\pages\dashboard.html:5
+msgid "Your Dashboard"
+msgstr ""
+
+#: .\templates\pages\about.html:15 .\templates\partials\_navbar.html:59
+#: .\templates\partials\_navbar.html:61 .\templates\partials\_navbar.html:131
+#: .\templates\partials\_navbar.html:133
+msgid "About Us"
+msgstr "نبذة عنا"
+
+#: .\templates\pages\about.html:16
+msgid ""
+"Welcome to gold robots! We aim to offer our customers a variety of the "
+"latest robots. We’ve come a long way, so we know exactly which direction to "
+"take when supplying you with high quality yet budget friendly products. We "
+"offer all of this while providing excellent customer service and friendly "
+"support, we always keep an eye on the latest trends in robots and put our "
+"customers’ wishes first. That’s why we have satisfied customers all over the"
+" world and are thrilled to be a part of the robots industry. The interests "
+"of our customers are always top priority for us, so we hope you will enjoy "
+"our products as much as much as we enjoy making them available to you That "
+"is why we have satisfied customers all over the world and are thrilled to be"
+" a part of the robots industry.The interests of our customers are always too"
+" priority for us, so we hope you will enjoy our products as much as we enjoy"
+" making them available to you."
+msgstr ""
+
+#: .\templates\pages\bank.html:5
+msgid "Finance Detail"
+msgstr ""
+
+#: .\templates\pages\bank.html:17
+msgid "Bank Accounts"
+msgstr "الحساب البنكي"
+
+#: .\templates\pages\bank.html:18 .\templates\pages\bank.html:86
+msgid "Deposit"
+msgstr "إيداع"
+
+#: .\templates\pages\bank.html:19
+msgid "Payment History"
+msgstr "تاريخ الودائع"
+
+#: .\templates\pages\bank.html:20 .\templates\pages\bank.html:144
+msgid "Withdraw"
+msgstr "سحب"
+
+#: .\templates\pages\bank.html:26
+msgid "Bank Name"
+msgstr "اسم البنك"
+
+#: .\templates\pages\bank.html:30
+msgid "Country"
+msgstr "البلد "
+
+#: .\templates\pages\bank.html:34
+msgid "Account number"
+msgstr "رقم الحساب"
+
+#: .\templates\pages\bank.html:38
+msgid "Currency"
+msgstr "العملة"
+
+#: .\templates\pages\bank.html:42
+msgid "Swift code"
+msgstr "رمز سويفت"
+
+#: .\templates\pages\bank.html:47
+msgid "Add Bank"
+msgstr "إضافة بنك  "
+
+#: .\templates\pages\bank.html:55 .\templates\pages\bank.html:110
+msgid "Payment system"
+msgstr "نظام الدفع "
+
+#: .\templates\pages\bank.html:82 .\templates\pages\bank.html:138
+msgid "Amount"
+msgstr "المبلغ"
+
+#: .\templates\pages\contract.html:6
+msgid "All Contracts Overview"
+msgstr ""
+
+#: .\templates\pages\contract.html:18
+msgid "Contract"
+msgstr "العقد"
+
+#: .\templates\pages\contract.html:23
+msgid "Minimun duration"
+msgstr "الحد الأدنى لمدة العقد "
+
+#: .\templates\pages\contract.html:27
+msgid "Minimun desposite"
+msgstr "الحد الأدنى للإيداع"
+
+#: .\templates\pages\contract.html:31
+msgid "Garantie percentage"
+msgstr "نسبة الضمان "
+
+#: .\templates\pages\contract.html:35 .\templates\pages\contractprofit.html:38
+msgid "Admin clients"
+msgstr "عملاء إداريين"
+
+#: .\templates\pages\contract.html:39
+msgid "Level"
+msgstr "المستوى"
+
+#: .\templates\pages\contractprofit.html:5
+#: .\templates\partials\_cpnavbar.html:32 .\templates\partials\_navbar.html:46
+#: .\templates\partials\_navbar.html:48 .\templates\partials\_navbar.html:118
+#: .\templates\partials\_navbar.html:120
+msgid "Contracts"
+msgstr "العقود"
+
+#: .\templates\pages\contractprofit.html:20
+msgid "Contract Information"
+msgstr ""
+
+#: .\templates\pages\contractprofit.html:30
+msgid "Contract name"
+msgstr "العقود"
+
+#: .\templates\pages\contractprofit.html:34
+msgid "Minimum amount"
+msgstr "الحد الأدنى للمبلغ"
+
+#: .\templates\pages\contractprofit.html:51
+msgid "Duration"
+msgstr "المدة"
+
+#: .\templates\pages\contractprofit.html:68
+msgid "Profit sharing"
+msgstr "تقاسم الأرباح"
+
+#: .\templates\pages\contractprofit.html:82
+msgid "Bulima Share"
+msgstr "حصة بوليما "
+
+#: .\templates\pages\contractprofit.html:86
+msgid "Your Share"
+msgstr "حصتك"
+
+#: .\templates\pages\contractprofit.html:97
+msgid "Minimum profit"
+msgstr "الحد الأدنى للربح"
+
+#: .\templates\pages\contractprofit.html:134
+msgid ""
+"In order to submit a contact you must first choose it here and then sumit it"
+" in the Personal Setting page."
+msgstr ""
+"لاختيار عقد يجب عليك أولاً اختياره هنا ثم اخياره في صفحة الاعدادات الشخصية"
+
+#: .\templates\pages\contractprofit.html:135
+msgid "Active"
+msgstr "تفعيل"
+
+#: .\templates\pages\dashboard.html:21
+msgid "Welcome back"
+msgstr "الخانه"
+
+#: .\templates\pages\dashboard.html:25
+msgid "Total balance"
+msgstr "إجمالي الرصيد"
+
+#: .\templates\pages\dashboard.html:29
+msgid "Total Profit"
+msgstr ""
+
+#: .\templates\pages\dashboard.html:33
+msgid "Total trades"
+msgstr "صفقات اليوم "
+
+#: .\templates\pages\dashboard.html:37
+msgid "New trades"
+msgstr ""
+
+#: .\templates\pages\dashboard.html:41
+msgid "Balance"
+msgstr ""
+
+#: .\templates\pages\dashboard.html:47
+msgid "Equity Level"
+msgstr "مستوى المساواة "
+
+#: .\templates\pages\dashboard.html:78 .\templates\pages\setting.html:36
+msgid "Leverage"
+msgstr "فعالية"
+
+#: .\templates\pages\dashboard.html:83
+msgid "Percentage in trade"
+msgstr "نسبة الصفقة"
+
+#: .\templates\pages\dashboard.html:99
+msgid "Remaining days"
+msgstr "الأيام المتبقية"
+
+#: .\templates\pages\dashboard.html:102
+msgid "Days"
+msgstr "يوم"
+
+#: .\templates\pages\dashboard.html:109
+msgid "Trading Chart"
+msgstr "جدول الصفقات "
+
+#: .\templates\pages\dashboard.html:117
+msgid "Average Trade Quantity"
+msgstr ""
+
+#: .\templates\pages\dashboard.html:142
+msgid "Trading Map"
+msgstr "خريطة الصفقات "
+
+#: .\templates\pages\dashboard.html:377
+msgid "Management Team"
+msgstr "الفريق الإداري"
+
+#: .\templates\pages\dashboard.html:404
+msgid "Recent Trades"
+msgstr ""
+
+#: .\templates\pages\index.html:6
+msgid "Welcome"
+msgstr "الخانه"
+
+#: .\templates\pages\index.html:18 .\templates\partials\_navbar.html:100
+msgid "Sign In"
+msgstr "تسجيل دخول"
+
+#: .\templates\pages\index.html:29
+msgid "Remember me"
+msgstr "تذكر كلمة السر "
+
+#: .\templates\pages\index.html:32
+msgid "Login"
+msgstr "تسجيل دخول "
+
+#: .\templates\pages\index.html:34
+msgid "Forgot your password?"
+msgstr "نسيت كلمة السر؟"
+
+#: .\templates\pages\index.html:35
+msgid "New here?"
+msgstr "هل انت جديد هنا ؟ "
+
+#: .\templates\pages\index.html:35 .\templates\pages\index.html:43
+msgid "Sign up"
+msgstr "أنشئ حسابك"
+
+#: .\templates\pages\index.html:55
+msgid "Join"
+msgstr ""
+
+#: .\templates\pages\index.html:57
+msgid "Already have an account?"
+msgstr ""
+
+#: .\templates\pages\index.html:57
+msgid "Sign in"
+msgstr "تسجيل دخول"
+
+#: .\templates\pages\index.html:73
+msgid ""
+"We design all in one tech solution for the complex<br/>needs of the "
+"management industry."
+msgstr "نقوم بتصميم حل تقني لجميع الاحتياجات المعقدة لإدارة رأس المال"
+
+#: .\templates\pages\index.html:77
+msgid "Reasons to invest in gold"
+msgstr "أسباب كي تستثمر في الذهب"
+
+#: .\templates\pages\index.html:81
+msgid "1.Its easy to buy store and sell"
+msgstr "۱. من السهل شراءه وتخزينه وبيعه"
+
+#: .\templates\pages\index.html:82
+msgid "Gold can come in a physical form or it can be..."
+msgstr "يمكن أن يأتي الذهب في شكل مادي أو يمكن أن يكون ..."
+
+#: .\templates\pages\index.html:86
+msgid "2.It can help with inflation"
+msgstr "۲.يمكن أن تساعد في التضخم الاقتصادي"
+
+#: .\templates\pages\index.html:87
+msgid "while golds ability to battle inflation is incons..."
+msgstr "في حين أن قدرة الذهب على محاربة التضخم الاقتصادي هي أيقونات ..."
+
+#: .\templates\pages\index.html:91
+msgid "3.It can diversify your portfolio"
+msgstr "۳. يمكنه تنويع محفظتك"
+
+#: .\templates\pages\index.html:92
+msgid "Gold can help diversify your portfolio. So in the..."
+msgstr "يمكن أن يساعد الذهب في تنويع محفظتك. لذا ، في "
+
+#: .\templates\pages\index.html:98
+msgid ""
+"Although the U.S. dollar is one of the world's most important reserve "
+"currencies, when the value of the dollar falls against other currencies as "
+"it did between 1998 and 2008, this often prompts people to flock to the "
+"security of gold, which raises gold prices.The price of gold nearly tripled "
+"between 1998 and 2008,reaching the $1,000 an ounce milestone in early 2008 "
+"and nearly doubling between 2008 and 2012 , hitting above the $2,000 mark. 1"
+" The decline is the U.S. dollar occurred for a number of reasons , including"
+" the country's large budget and trade deficits and a large increase in the "
+"mony supply."
+msgstr ""
+"على الرغم من أن الدولار الأمريكي يعد من أهم العملات الاحتياطية في العالم، إلا أنه عندما تنخفض قيمة الدولار أمام العملات الأخرى, كما حدث بين عامي ۱۹۹۸ و ۲۰۰۸، فإن هذا غالبًا ما يدفع الناس إلى التدفق الى منطقة امنة و شراء الذهب ، مما يرفع أسعار الذهب. \n"
+"تضاعف سعر الذهب ثلاث مرات تقريبًا بين عامي ۱۹۹۸و۲۰۰۸، ووصل إلى ۱۰۰۰ دولار للأونصة في أوائل عام ۲۰۰۸ وتضاعف تقريبًا بين عامي ۲۰۰۸ و ۲۰۱۲، ووصل إلى ما فوق ۲۰۰۰ دولار. الأسباب، بما في ذلك الميزانية الكبيرة للبلاد والعجز التجاري والزيادة الكبيرة في المعروض النقدي"
+
+#: .\templates\pages\index.html:102
+msgid "Why you should invest in gold"
+msgstr "أسباب كي تستثمر في الذهب"
+
+#: .\templates\pages\investment.html:4 .\templates\pages\investment.html:13
+#: .\templates\partials\_navbar.html:53 .\templates\partials\_navbar.html:55
+#: .\templates\partials\_navbar.html:125 .\templates\partials\_navbar.html:127
+msgid "Investment"
+msgstr "الاستثمار"
+
+#: .\templates\pages\investment.html:15
+msgid ""
+"Contrary to popular belief, Lorem Ipsum is not simply random text. It has "
+"roots in a piece of classical Latin literature from 45 BC, making it over "
+"2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney "
+"College in Virginia, looked up one of the more obscure Latin words, "
+"consectetur, from a Lorem Ipsum passage, and going through the cites of the "
+"word in classical literature, discovered the undoubtable source. Lorem Ipsum"
+" comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum "
+"(The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a "
+"treatise on the theory of ethics, very popular during the Renaissance. The "
+"first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line "
+"in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is"
+" reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de"
+" Finibus Bonorum et Malorum by Cicero are also reproduced in their exact "
+"original form, accompanied by English versions from the 1914 translation by "
+"H. Rackham."
+msgstr ""
+"مرحبا بكم في الروبوتات الذهبية! يهدف عملنا إلى تزويد عملائنا بمجموعة متنوعة من أحدث الروبوتات. بسبب خبراتنا المتراكمة فإننا قادرون على التحديد بدقة الاتجاه الذي يجب اتخاذه عند تزويدك بمنتجات ذات جودة عالية مع مراعاة للميزانية.\n"
+"إضافة الى تقديم خدمة عملاء ممتازة ودعم ودود، نقوم بمراقبة مستمرة لأحدث الاتجاهات في مجال الروبوتات ونضع رغبات عملائنا أولاً. لهذا السبب لدينا العديد من العملاء الراضين في جميع أنحاء العالم ويسعدنا أن نكون جزءًا من صناعة الروبوتات. \n"
+"ان مصالح عملائنا أولوية كبيرة بالنسبة لنا ، لذلك نتمنى أن تستمتع بمنتجاتنا بقدر ما نتمتع بإتاحتها لك."
+
+#: .\templates\pages\news.html:4
+msgid "Top News"
+msgstr "أخبار وأحداث"
+
+#: .\templates\pages\profile.html:5
+msgid "Personal Profile"
+msgstr ""
+
+#: .\templates\pages\profile.html:22
+msgid "Account ID"
+msgstr "رقم الحساب"
+
+#: .\templates\pages\profile.html:41
+msgid "Date of birth"
+msgstr "تاريخ الميلاد "
+
+#: .\templates\pages\profile.html:52
+msgid "Email"
+msgstr "البريد الالكتروني "
+
+#: .\templates\pages\profile.html:63
+msgid "Phone"
+msgstr " رقم الهاتف "
+
+#: .\templates\pages\profile.html:74
+msgid "Registration date"
+msgstr "تاريخ التسجيل"
+
+#: .\templates\pages\profile.html:83
+msgid "Total Balance"
+msgstr "إجمالي الرصيد "
+
+#: .\templates\pages\setting.html:4
+msgid "Contract Extra Setting"
+msgstr "اعدادات العقود "
+
+#: .\templates\pages\setting.html:14 .\templates\partials\_cpnavbar.html:33
+msgid "Contract Setting"
+msgstr "اعدادات العقود "
+
+#: .\templates\pages\setting.html:18
+msgid "Choose Contract"
+msgstr "اختر العقد"
+
+#: .\templates\pages\setting.html:27
+msgid "Max usage deposit"
+msgstr "الحد الأعلى للسحب "
+
+#: .\templates\pages\setting.html:45
+msgid "Add extra day"
+msgstr "ادخل يوم اضافي "
+
+#: .\templates\pages\setting.html:54
+msgid "Trading timeframe"
+msgstr "الإطار الزمني للتداول "
+
+#: .\templates\pages\setting.html:65
+msgid "Time range"
+msgstr "النطاق الزمني"
+
+#: .\templates\pages\setting.html:73
+msgid "Submit"
+msgstr ""
+
+#: .\templates\partials\_cpnavbar.html:8 .\templates\partials\_navbar.html:7
+msgid "Hello, Welcome to Bulima customer support. How can we help you?"
+msgstr ""
+
+#: .\templates\partials\_cpnavbar.html:29
+msgid "Profile"
+msgstr "الملف الشخصي "
+
+#: .\templates\partials\_cpnavbar.html:30
+msgid "Dashboard"
+msgstr "لوحة الاعدادات "
+
+#: .\templates\partials\_cpnavbar.html:31
+msgid "Bank"
+msgstr "البنك "
+
+#: .\templates\partials\_cpnavbar.html:36
+msgid "Logout"
+msgstr "تسجيل الخروج "
+
+#: .\templates\partials\_navbar.html:34 .\templates\partials\_navbar.html:36
+#: .\templates\partials\_navbar.html:106 .\templates\partials\_navbar.html:108
+msgid "Home"
+msgstr ""
+
+#: .\templates\partials\_navbar.html:40 .\templates\partials\_navbar.html:42
+#: .\templates\partials\_navbar.html:112 .\templates\partials\_navbar.html:114
+msgid "Gold News"
+msgstr "أخبار وأحداث"
+
+#: .\templates\partials\_navbar.html:101
+msgid "Sign Up"
+msgstr "أنشئ حسابك"

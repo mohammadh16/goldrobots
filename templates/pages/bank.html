@@ -1,7 +1,8 @@
 {% extends 'cpbase.html' %}
 {% load static %}
 {% load humanize %}
-{% block title %} | Finance Detail{% endblock %}
+{% load i18n %}
+{% block title %} | {% trans 'Finance Detail' %}{% endblock %}
 {% block content %}
 <body>
     <div class="containerCp">
@@ -13,37 +14,37 @@
             <div class="mainTab">
                                 
                             <div class="tab">
-                                <button class="tablinks" onclick="openCity(event, 'Bank')" id="defaultOpen">Bank Accounts</button>
-                                <button class="tablinks" onclick="openCity(event, 'Deposit')">Deposit</button>
-                                <button class="tablinks" onclick="openCity(event, 'Payment')">Payment History</button>
-                                <button class="tablinks" onclick="openCity(event, 'Withdraw')">Withdraw</button>
+                                <button class="tablinks" onclick="openCity(event, 'Bank')" id="defaultOpen">{% trans 'Bank Accounts' %}</button>
+                                <button class="tablinks" onclick="openCity(event, 'Deposit')">{% trans 'Deposit' %}</button>
+                                <button class="tablinks" onclick="openCity(event, 'Payment')">{% trans 'Payment History' %}</button>
+                                <button class="tablinks" onclick="openCity(event, 'Withdraw')">{% trans 'Withdraw' %}</button>
                             </div>
                             
                             <div id="Bank" class="tabcontent">
                                 <div class="inputs">
                                     <div class="item">
-                                        <label for="">Bank Name</label>
+                                        <label for="">{% trans 'Bank Name' %}</label>
                                         <input type="text">
                                     </div>
                                     <div class="item">
-                                        <label for="">Country</label>
+                                        <label for="">{% trans 'Country' %}</label>
                                         <input type="text">
                                     </div>
                                     <div class="item">
-                                        <label for="">Account number</label>
+                                        <label for="">{% trans 'Account number' %}</label>
                                         <input type="text">
                                     </div>
                                     <div class="item">
-                                        <label for="">Currency</label>
+                                        <label for="">{% trans 'Currency' %}</label>
                                         <input type="text">
                                     </div>
                                     <div class="item">
-                                        <label for="">Swift code</label>
+                                        <label for="">{% trans 'Swift code' %}</label>
                                         <input type="text">
                                     </div>
                                     
                                     <div class="btnAdd">
-                                        <button>Add Bank</button>
+                                        <button>{% trans 'Add Bank' %}</button>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +52,7 @@
                                 <div class="inputs">
                                     <div class="itemBranch" id="myDIV">
                                         <div class="itemBranch" id="myDIV">
-                                        <label for="">Payment system</label>
+                                        <label for="">{% trans 'Payment system' %}</label>
                                         <a class="branch">
                                             <div class="visaGroup">
                                                 <img class="Paypal" src="{% static 'images/Mastercard-logo.svg.png' %}" alt="">
@@ -78,11 +79,11 @@
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <label for="">Amount</label>
+                                        <label for="">{% trans 'Amount' %}</label>
                                         <input type="text">
                                     </div>
                                     <div class="btnAdd">
-                                        <button>Deposit</button>
+                                        <button>{% trans 'Deposit' %}</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +107,7 @@
                             <div id="Withdraw" class="tabcontent">
                                 <div class="inputs">
                                     <div class="itemBranch" id="myDIV2" >
-                                        <label for="">Payment system</label>
+                                        <label for="">{% trans 'Payment system' %}</label>
                                         <a class="branch">
                                             <div class="visaGroup">
                                                 <img class="Paypal" src="{% static 'images/Mastercard-logo.svg.png' %}" alt="">
@@ -134,13 +135,13 @@
                                         
                                     </div>
                                     <div class="item">
-                                        <label for="">Amount</label>
+                                        <label for="">{% trans 'Amount' %}</label>
                                         <input type="text">
                                     </div>
                                     
                                     
                                     <div class="btnAdd">
-                                        <button>Withdraw</button>
+                                        <button>{% trans 'Withdraw' %}</button>
                                     </div>
                                 </div>
                             </div>

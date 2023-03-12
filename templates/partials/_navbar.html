@@ -1,9 +1,10 @@
 {% load static %}
+{% load i18n %}
 <div class="chat">
     <div id="ChatOpen" class="popoupChat">
         <h1 onclick="CloseChat()">X</h1>
         <div class="textchat">
-            <h6>Hello, Welcome to Bulima customer support. How can we help you?</h6>
+            <h6>{% trans "Hello, Welcome to Bulima customer support. How can we help you?" %}</h6>
         </div>
         <input type="text" placeholder="Type here" class="chatBox">
     </div>
@@ -30,46 +31,61 @@
         <div class="right">
             <div class="lists">
                 {% if '/' == request.path %}
-                <a id="activeColor" href="{% url 'index' %}">Home</a>
+                <a id="activeColor" href="{% url 'index' %}">{% trans 'Home' %}</a>
                 {% else %}
-                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'index' %}">{% trans 'Home' %}</a>
                 {% endif %}
 
                 {% if 'news' in request.path %}
-                <a id="activeColor" href="{% url 'news' %}">Gold News</a>
+                <a id="activeColor" href="{% url 'news' %}">{% trans 'Gold News' %}</a>
                 {% else %}
-                <a href="{% url 'news' %}">Gold News</a>
+                <a href="{% url 'news' %}">{% trans 'Gold News' %}</a>
                 {% endif %}
 
                 {% if 'contract' in request.path %}
-                <a id="activeColor" href="{% url 'contract' %}">Contracts</a>
+                <a id="activeColor" href="{% url 'contract' %}">{% trans 'Contracts' %}</a>
                 {% else %}
-                <a href="{% url 'contract' %}">Contracts</a>
+                <a href="{% url 'contract' %}">{% trans 'Contracts' %}</a>
                 {% endif %}
                 
                 
                 {% if 'investment' in request.path %}
-                <a id="activeColor" href="{% url 'investment' %}">Investment</a>
+                <a id="activeColor" href="{% url 'investment' %}">{% trans 'Investment' %}</a>
                 {% else %}
-                <a href="{% url 'investment' %}">Investment</a>
+                <a href="{% url 'investment' %}">{% trans 'Investment' %}</a>
                 {% endif %}
                 
                 {% if 'about' in request.path %}
-                <a id="activeColor" href="{% url 'about' %}">About Us</a>
+                <a id="activeColor" href="{% url 'about' %}">{% trans 'About Us' %}</a>
                 {% else %}
-                <a href="{% url 'about' %}">About Us</a>
+                <a href="{% url 'about' %}">{% trans 'About Us' %}</a>
                 {% endif %}
                 
 
             </div>
             <div class="language">
                 <div class="dropdown">
-                    <img class="flagLan" src="{% static 'images/English.png' %}" alt="language">
-                    <div class="dropdown-content">
-                     <div class="flag"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></div>
-                     <div class="flag"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></div>
-                    </div>
-                  </div>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+
+                    {% for lang in languages %}
+                        {% if lang.code == 'en' %}
+                            <a class="flagLan" href="/{{ lang.code }}/"><img class="flagLan" src="{% static 'images/English.png' %}" alt="language"></a>
+                        {% endif %}
+                    {% endfor %}
+                <div class="dropdown-content">
+                    {% for lang in languages %}
+                        {% if lang.code == 'en' %}
+                            <a class="flagMulti"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></a>
+                        {% endif %}
+
+                        {% if lang.code == 'ar' %}
+                            <a class="flagMulti" href="/{{ lang.code }}/"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+              </div>
 
                   {% for account in accounts %}
                   {% if account.accountname == user.username %}
@@ -81,50 +97,67 @@
         
     {% else %}
     <div class="left">
-        <a href="/#popup1">Sign In</a>
-        <a href="/#popup2">Sign Up</a>
+        {% get_current_language as LANGUAGE_CODE %}
+        <a href="/#popup1">{% trans 'Sign In' %}</a>
+        <a href="/#popup2">{% trans 'Sign Up' %}</a>
     </div>
     <div class="right">
         <div class="lists">
             {% if '/' == request.path %}
-            <a id="activeColor" href="{% url 'index' %}">Home</a>
+            <a id="activeColor" href="{% url 'index' %}">{% trans 'Home' %}</a>
             {% else %}
-            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'index' %}">{% trans 'Home' %}</a>
             {% endif %}
 
             {% if 'news' in request.path %}
-            <a id="activeColor" href="{% url 'news' %}">Gold News</a>
+            <a id="activeColor" href="{% url 'news' %}">{% trans 'Gold News' %}</a>
             {% else %}
-            <a href="{% url 'news' %}">Gold News</a>
+            <a href="{% url 'news' %}">{% trans 'Gold News' %}</a>
             {% endif %}
 
             {% if 'contract' in request.path %}
-            <a id="activeColor" href="{% url 'contract' %}">Contracts</a>
+            <a id="activeColor" href="{% url 'contract' %}">{% trans 'Contracts' %}</a>
             {% else %}
-            <a href="{% url 'contract' %}">Contracts</a>
+            <a href="{% url 'contract' %}">{% trans 'Contracts' %}</a>
             {% endif %}
             
             
             {% if 'investment' in request.path %}
-            <a id="activeColor" href="{% url 'investment' %}">Investment</a>
+            <a id="activeColor" href="{% url 'investment' %}">{% trans 'Investment' %}</a>
             {% else %}
-            <a href="{% url 'investment' %}">Investment</a>
+            <a href="{% url 'investment' %}">{% trans 'Investment' %}</a>
             {% endif %}
             
             {% if 'about' in request.path %}
-            <a id="activeColor" href="{% url 'about' %}">About Us</a>
+            <a id="activeColor" href="{% url 'about' %}">{% trans 'About Us' %}</a>
             {% else %}
-            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'about' %}">{% trans 'About Us' %}</a>
             {% endif %}
             
 
         </div>
         <div class="language">
+            
             <div class="dropdown">
-                <img class="flagLan" src="{% static 'images/English.png' %}" alt="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+
+                    {% for lang in languages %}
+                        {% if lang.code == 'en' %}
+                            <a class="flagLan" href="/{{ lang.code }}/"><img class="flagLan" src="{% static 'images/English.png' %}" alt="language"></a>
+                        {% endif %}
+                    {% endfor %}
                 <div class="dropdown-content">
-                    <div class="flag"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></div>
-                     <div class="flag"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></div>
+                    {% for lang in languages %}
+                        {% if lang.code == 'en' %}
+                            <a class="flagMulti"><img src="{% static 'images/icons8-turkey-48.png' %}" alt="language"></a>
+                        {% endif %}
+
+                        {% if lang.code == 'ar' %}
+                            <a class="flagMulti" href="/{{ lang.code }}/"><img src="{% static 'images/icons8-saudi-arabia-48.png' %}" alt="language"></a>
+                        {% endif %}
+                    {% endfor %}
                 </div>
               </div>
     </div>

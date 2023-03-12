@@ -1,8 +1,10 @@
 {% extends 'cpbase.html' %}
 {% load static %}
+{% load i18n %}
 {% load humanize %}
-{% block title %} | Contracts {% endblock %}
+{% block title %} |{% trans 'Contracts' %}  {% endblock %}
 {% block content %}
+
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <div class="containerCp">
@@ -15,7 +17,7 @@
                 <div class="information">
                     <div class="w3-center">
                           <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ </button>
-                          <h4>Contract Information</h4>
+                          <h4>{% trans 'Contract Information' %}</h4>
                           <button class="w3-button w3-light-grey" onclick="plusDivs(1)"> ❯</button>
                        
                       </div>
@@ -25,15 +27,15 @@
                         <div class="mySlides">
                             <div class="infoData">
                                 <div class="rowData">
-                                    <h5>Contract name</h5>
+                                    <h5>{% trans 'Contract name' %}</h5>
                                     <h5>{{contract.name}}</h5>
                                 </div>
                                 <div class="rowData">
-                                    <h5>Minimum amount</h5>
+                                    <h5>{% trans 'Minimum amount' %}</h5>
                                     <h5>$ {{contract.minimum_deposit|intcomma}}</h5>
                                 </div>
                                 <div class="rowData">
-                                    <h5>Admin clients</h5>
+                                    <h5>{% trans 'Admin clients' %}</h5>
                                     <h5>{{contract.admin_clients}}</h5>
                                 </div>
                             </div>
@@ -46,7 +48,7 @@
                 {% for account in accounts %}
                 {% if account.accountname == user.username %}
                 <div class="duration">
-                    <h3 class="headBox">Duration</h3>
+                    <h3 class="headBox">{% trans 'Duration' %}</h3>
                     <div class="durationState">
                         <img src="{% static 'images/4455.png' %} "  alt="">
                         <h4>{{account.remaining_days}}</h4>
@@ -63,7 +65,7 @@
             </div>
             <div class="leftRight">
                 <div class="profit">
-                    <h3 class="headBox">Profit sharing</h3>
+                    <h3 class="headBox">{% trans 'Profit sharing' %}</h3>
                     <div class="chartProfit">
                         <div class="pie">
                             <canvas id="myChart" ></canvas>
@@ -77,11 +79,11 @@
                         <div class="legends">
                             <div class="topL">
                                 <div class="ball"><h5>{{contract.bulima_share}}%</h5></div>
-                                <h6>Bulima Share</h6>
+                                <h6>{% trans 'Bulima Share' %}</h6>
                             </div>
                             <div class="downL">
                                 <div class="ball"><h5>{{contract.client_share}}%</h5></div>
-                                <h6>Your Share</h6>
+                                <h6>{% trans 'Your Share' %}</h6>
                             </div>
                         </div>
                                     {% endif %}
@@ -92,7 +94,7 @@
                 </div>
                 
                 <div class="Minmumm">
-                    <h3 class="headBox">Minimum profit</h3>
+                    <h3 class="headBox">{% trans 'Minimum profit' %}</h3>
                     <div class="mainRuler">
                         <div class="trendRuler"></div>
                         <div class="rulerPlace">
@@ -129,8 +131,8 @@
         </div>
         
         <div class="activePlace">
-            <h5>In order to submit a contact you must first choose it here and then sumit it in the Personal Setting page.</h5>
-            <a href="{% url 'setting' %}"><button>Active</button></a>
+            <h5>{% trans "In order to submit a contact you must first choose it here and then sumit it in the Personal Setting page." %}</h5>
+            <a href="{% url 'setting' %}"><button>{% trans 'Active' %}</button></a>
         </div>
         <footer class="footerCpD">
             <div class="logo-version">

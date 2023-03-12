@@ -1,7 +1,8 @@
 {% extends 'cpbase.html' %}
 {% load static %}
 {% load humanize %}
-{% block title %} | Your Dashboard{% endblock %}
+{% load i18n %}
+{% block title %} | {% trans 'Your Dashboard' %}{% endblock %}
 
 {% block content %}
 
@@ -17,33 +18,33 @@
                         <div class="mainDashboard">
                             <div class="firstLayer">
                                 <div class="box">
-                                    <h3>Welcome back {{user.username}} !</h3> 
+                                    <h3>{% trans 'Welcome back' %} {{user.username}} !</h3> 
                                     <h4>{{account.accountid}}</h4>
                                 </div>
                                 <div class="box">
-                                    <h3>Total balance</h3>
+                                    <h3>{% trans 'Total balance' %}</h3>
                                     <h4>${{account.total_balance|intcomma}}</h4>
                                 </div>
                                 <div class="box">
-                                    <h3>Total Profit</h3>
+                                    <h3>{% trans 'Total Profit' %}</h3>
                                     <h4>${{account.total_profit|intcomma}}</h4>
                                 </div>
                                 <div class="box">
-                                    <h3>Total trades</h3>
+                                    <h3>{% trans 'Total trades' %}</h3>
                                     <h4>{{account.total_trades}}</h4>
                                 </div>
                                 <div class="box">
-                                    <h3>New trades</h3>
+                                    <h3>{% trans 'New trades' %}</h3>
                                     <h4>{{account.new_trades}}</h4>
                                 </div>
                                 <div class="box">
-                                    <h3>Balance </h3>
+                                    <h3>{% trans 'Balance' %} </h3>
                                     <h4>${{account.balance|intcomma}}</h4>
                                 </div>
                             </div>
                             <div class="secondLayer">
                                 <div class="box">
-                                    <h3 class="headBox">Equity Level</h3>
+                                    <h3 class="headBox">{% trans 'Equity Level' %}</h3>
                                     <div class="trendLevel">
                                         <div class="percentageBase">
                                             <h5>%0</h5>
@@ -74,12 +75,12 @@
                                 </div>
                                 <div class="box">
                                     <div class="top">
-                                        <h2>Leverage</h3>
+                                        <h2>{% trans 'Leverage' %}</h3>
                                         <img src="{% static 'images/Group551.png' %}" alt="Trend">
                                         <h1>{{account.leverage}}</h1>
                                     </div>
                                     <div class="down">
-                                        <h3>Percentage in trade</h3>
+                                        <h3>{% trans 'Percentage in trade' %}</h3>
                                         <div class="progress">
                                             <div class="colorPercent" style="font-size: 0;">{{account.percentage_in_trade}}%
                                             </div>
@@ -95,17 +96,17 @@
                                     
                                 </div>
                                 <div class="box">
-                                    <h3 class="headBox">Remaining days</h3>
+                                    <h3 class="headBox">{% trans 'Remaining days' %}</h3>
                                     <div class="calendar">
                                         <div class="imgCalendar">
-                                            <h4 class="daysC">Days</h4>
+                                            <h4 class="daysC">{% trans 'Days' %}</h4>
 
                                             <h3 class="dayNum">{{account.remaining_days}}</h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="box">
-                                    <h3 class="headBox">Trading Chart</h3>
+                                    <h3 class="headBox">{% trans 'Trading Chart' %}</h3>
                                     <div class="mainChart">
                                         <canvas id="myChart" style="height: 20rem    !important;"></canvas>
                                     </div>
@@ -113,7 +114,7 @@
                             </div>
                             <div class="thirdLayer">
                                 <div class="box">
-                                    <h3 class="headBox">Average Trade Quantity</h3>
+                                    <h3 class="headBox">{% trans 'Average Trade Quantity' %}</h3>
                                     <div class="mainTrader">
                                         {% for row in avgtrade%}
                                         {% if row.account.accountname == user.username %}
@@ -138,7 +139,7 @@
                                 </div>
                                 <div class="box">
                                     <div class="Topmap">
-                                    <h3 class="headBox">Trading Map</h3>
+                                    <h3 class="headBox">{% trans 'Trading Map' %}</h3>
                                     
                                    
                                     
@@ -373,7 +374,7 @@
                                     </div>
                                     </div>
                                     <div class="Management">
-                                    <h3 class="headBox">Management Team</h3>
+                                    <h3 class="headBox">{% trans 'Management Team' %}</h3>
                                     <div class="Contacs">
                                         {% if employee %}
                                             {% for employee in employee %}
@@ -400,7 +401,7 @@
                                     </div>
                                 </div>
                                 <div class="box">
-                                    <h3 class="headBox">Recent Trades</h3>
+                                    <h3 class="headBox">{% trans 'Recent Trades' %}</h3>
                                     <div class="condition">
                                         
                                         {% for trade in recenttrade  %}
