@@ -97,9 +97,24 @@
         
     {% else %}
     <div class="left">
-        {% get_current_language as LANGUAGE_CODE %}
-        <a href="/#popup1">{% trans 'Sign In' %}</a>
-        <a href="/#popup2">{% trans 'Sign Up' %}</a>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+
+                    
+                        {% if LANGUAGE_CODE == 'ar' %}
+                        {% for lang in languages %}
+                        {% if lang.code == 'ar' %}
+                        <a href="/{{ lang.code }}/#popup1">{% trans 'Sign In' %}</a>
+                        <a href="/{{ lang.code }}/#popup2">{% trans 'Sign Up' %}</a>
+                        {% endif %}
+                        {% endfor %}
+                        {% else %}
+                        <a href="#popup1">{% trans 'Sign In' %}</a>
+                        <a href="#popup2">{% trans 'Sign Up' %}</a>
+                        
+                        {% endif %}
+
     </div>
     <div class="right">
         <div class="lists">
