@@ -483,4 +483,47 @@ position: absolute;
     .contract .leftRight{
         width: 100%;
     }
+    .contract{
+        width: 80%;
+        margin-top: 25%; 
+       
+    }
+    .activePlace{
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    .activePlace{
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    .activePlace h5{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .chartProfit{
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+    .chartProfit .legends{
+        flex-direction: row;
+        width: 90%;
+        height: 5rem;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    .chartProfit .legends .topL{
+        width: 45%;
+        position: relative;
+    }
+    .chartProfit .legends .downL{
+        width: 45%;
+        position: relative;
+
+    }
+    .chartProfit .lines{
+      display: none;
+    }
 }
